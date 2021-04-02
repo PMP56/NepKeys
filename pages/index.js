@@ -1,65 +1,64 @@
 import Head from 'next/head'
+import { useContext } from 'react';
+
+import Keyboard from '../components/Keyboard'
+import Text from '../components/Texts'
 import styles from '../styles/Home.module.css'
 
+import { TextContext } from '../components/TextContext'
+import Texts from '../components/Texts';
+
 export default function Home() {
+  const {
+    currentLetterIndex,
+    changeLetterIndex,
+    currentSentenceIndex,
+    changeSentenceIndex,
+    userText,
+    addUserText
+  } = useContext(TextContext);
+
+  const buttonPress = (e) => {
+    e.preventDefault();
+    let keyCode = e.keyCode;
+    let element;
+
+    if ((keyCode >= 65 && keyCode <= 90) || keyCode == 32) {
+      changeLetterIndex(currentLetterIndex + 1);
+      addUserText(e.key);
+    }
+
+    if (keyCode == 16 || keyCode == 17 || keyCode == 18) {
+      element = document.querySelector(`.${e.code}`);
+    } else {
+      element = document.querySelector(`.key-${keyCode}`);
+    }
+    element.style.backgroundColor = '#333';
+    element.style.color = 'white';
+  }
+  const buttonRelease = (e) => {
+    let keyCode = e.keyCode;
+    let element;
+    if (keyCode == 16 || keyCode == 17 || keyCode == 18) {
+      element = document.querySelector(`.${e.code}`);
+    } else {
+      element = document.querySelector(`.key-${keyCode}`);
+    }
+    element.style.backgroundColor = 'white';
+    element.style.color = 'black';
+  }
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease}>
       <Head>
-        <title>Create Next App</title>
+        <title>NepKeys : Practice Nepali Typing Online</title>
+        <meta name='keywords' content='practice nepali typing online, nepali typing, nepali, typing, online' />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Texts />
+      <Keyboard />
     </div>
   )
 }

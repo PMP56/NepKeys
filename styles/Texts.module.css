@@ -1,0 +1,51 @@
+@font-face{
+    font-family: Nepali;
+    src: url('../public/fonts/Preeti.otf') format("opentype");
+    unicode-range: U+00-7F;
+  }
+
+.textContainer{
+    margin: 25px;
+}
+
+.textRow{
+    margin: 0;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: Nepali;
+    letter-spacing: 1px;
+}
+
+
+#textCurrent{
+    animation-name: cursorMove;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    color: black;
+}
+
+.textRem{
+    color: black;
+}
+
+.textCorrect{
+    color: rgb(0, 99, 165);
+}
+
+.textIncorrect{
+    color: rgb(255, 60, 60);
+}
+
+@keyframes cursorMove{
+    100%{
+        text-decoration: none;
+        /* background-color: black;
+        color: white; */
+    }
+
+    40%{
+        text-decoration: underline solid 2px;
+        /* background-color: white;
+        color: black; */
+    }
+}
