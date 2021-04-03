@@ -5,7 +5,7 @@ const Key = (props) => {
     let className = props.class;
 
     return (
-        <div className={className} id='key'>
+        <div className={className} id={styles.key}>
             <p style={{ margin: '0px' }}>{vals[0]}</p>
             <p style={{ margin: '0px' }}>{vals[1]}</p>
         </div>

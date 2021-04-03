@@ -10,7 +10,7 @@
 
 .textRow{
     margin: 0;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 600;
     font-family: Nepali;
     letter-spacing: 1px;
@@ -21,11 +21,13 @@
     animation-name: cursorMove;
     animation-duration: 0.9s;
     animation-iteration-count: infinite;
-    color: black;
+    color: var(--textColor);
+    transition-duration: 0.3s;
 }
 
 .textRem{
-    color: black;
+    color: var(--textColor);
+    transition-duration: 0.3s;
 }
 
 .textCorrect{

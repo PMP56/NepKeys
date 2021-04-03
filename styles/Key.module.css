@@ -5,15 +5,16 @@
   }
 
 #key{
-    height: 50px;
+    height: 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--keyColor);
+    transition-duration: 0.3s;
     border-radius: 2.5px;
     margin: 2px;
-    color: black;
+    color: var(--textColor);
 }
 
 .key p:nth-child(1){

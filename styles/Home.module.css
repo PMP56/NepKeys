@@ -1,4 +1,38 @@
+.light{
+  --backColor: aliceblue;
+  --textColor: black;
+  --keyboardBackground: rgb(225, 225, 225);
+  --keyboardBorder: rgb(120, 120, 120);
+  --keyboardShadow: rgb(0 0 0 / 22%);
+  --keyColor: white;
+  --keyPressColor: #333;
+  --keyPressTextColor: white;
+}
+
+.dark{
+  --backColor: rgb(50, 50, 50);
+  --textColor: white;
+  --keyboardBackground: rgb(30, 30, 30);
+  --keyboardBorder: rgb(135, 135, 135);
+  --keyboardShadow: rgb(200 200 200 / 22%);
+  --keyColor: rgb(50, 50, 50);
+  --keyPressColor: rgb(99, 99, 99);
+  --keyPressTextColor: white;
+}
+
+.color{
+  --backColor: rgb(50, 50, 50);
+  --textColor: white;
+  --keyboardBackground: linear-gradient(to right, #0868a8, #25db52, #fdbb2d, #cf1b1b);
+  --keyboardBorder: rgb(135, 135, 135);
+  --keyboardShadow: rgb(200 200 200 / 22%);
+  --keyColor: rgb(50, 50, 50);
+  --keyPressColor: rgb(99, 99, 99) ;
+  --keyPressTextColor: white;
+}
+
 .container{
+  background-color: var(--backColor);
   width: 100vw;
   height: 100vh;
   text-align: center;
@@ -9,4 +43,34 @@
   font-size: 13px;
   font-weight: 900;
   font-family: Montserrat;
+  transition-duration: 0.3s;
+}
+
+.buttonContainer{
+  padding: 4px;
+  background-color: var(--keyboardBorder);
+  border-radius: 50%;
+  transition-duration: 0.3s;
+  letter-spacing: 0.75px;
+  cursor: pointer;
+}
+
+.buttonContainer:hover {
+  box-shadow: 0 10px 40px -5px var(--keyboardShadow);
+}
+
+
+.themeButton{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-style: none;
+  text-align: center;
+  outline: none;
+  background-color: var(--keyColor);
+  color: var(--textColor);
+  transition-duration: 0.3s;
+  font-family: Montserrat;
+  font-weight: 600;
+  cursor: pointer;
 }
