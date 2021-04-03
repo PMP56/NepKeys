@@ -3,10 +3,11 @@
   --textColor: black;
   --keyboardBackground: rgb(225, 225, 225);
   --keyboardBorder: rgb(120, 120, 120);
-  --keyboardShadow: rgb(0 0 0 / 22%);
+  --keyboardShadow: rgb(0 0 120 / 40%);
   --keyColor: white;
   --keyPressColor: #333;
   --keyPressTextColor: white;
+  --animation: colorMove 2s ease 0;
 }
 
 .dark{
@@ -18,17 +19,19 @@
   --keyColor: rgb(50, 50, 50);
   --keyPressColor: rgb(99, 99, 99);
   --keyPressTextColor: white;
+  --animation: colorMove 3s ease 0;
 }
 
 .color{
   --backColor: rgb(50, 50, 50);
   --textColor: white;
-  --keyboardBackground: linear-gradient(to right, #0868a8, #25db52, #fdbb2d, #cf1b1b);
-  --keyboardBorder: rgb(135, 135, 135);
+  --keyboardBackground: linear-gradient(to right, rgb(8, 104, 168), rgb(37, 219, 82), rgb(253, 187, 45),rgb(252, 53, 86), rgb(250, 40, 45));
+  --keyboardBorder: linear-gradient(to right, rgb(8, 104, 168), rgb(37, 219, 82), rgb(253, 187, 45),rgb(252, 53, 86), rgb(250, 40, 45));
   --keyboardShadow: rgb(200 200 200 / 22%);
   --keyColor: rgb(50, 50, 50);
-  --keyPressColor: rgb(99, 99, 99) ;
-  --keyPressTextColor: white;
+  --keyPressColor: transparent ;
+  --keyPressTextColor: white rgb(252, 53, 86);
+  --animation: colorMove 10s ease infinite;
 }
 
 .container{
@@ -48,7 +51,7 @@
 
 .buttonContainer{
   padding: 4px;
-  background-color: var(--keyboardBorder);
+  background: var(--keyboardBorder);
   border-radius: 50%;
   transition-duration: 0.3s;
   letter-spacing: 0.75px;
@@ -73,4 +76,16 @@
   font-family: Montserrat;
   font-weight: 600;
   cursor: pointer;
+}
+
+@keyframes colorMove{
+  0% {
+    background-position:0% 50%
+  }
+  50% {
+    background-position:100% 50%
+  }
+  100% {
+    background-position:0% 50%
+  }
 }

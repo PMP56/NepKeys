@@ -1,0 +1,26 @@
+.header{
+    position: fixed;
+    top: 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: var(--textColor);
+}
+
+.logoBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+.description{
+    letter-spacing: 1px;
+    font-size: 20px;
+}

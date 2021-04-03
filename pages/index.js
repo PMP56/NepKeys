@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 
+import Header from '../components/Header'
 import Keyboard from '../components/Keyboard'
 import Text from '../components/Texts'
 import styles from '../styles/Home.module.css'
@@ -19,6 +20,16 @@ export default function Home() {
   } = useContext(TextContext);
 
   const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    let theme = localStorage.getItem('theme');
+    if (theme) {
+      setTheme(theme);
+    } else {
+      setTheme('light');
+    }
+  }, [0])
+
 
   const buttonPress = (e) => {
     e.preventDefault();
@@ -54,10 +65,13 @@ export default function Home() {
     const click = () => {
       if (theme == 'light') {
         setTheme('dark');
+        localStorage.setItem('theme', 'dark');
       } else if (theme == 'dark') {
         setTheme('color');
+        localStorage.setItem('theme', 'color');
       } else {
         setTheme('light');
+        localStorage.setItem('theme', 'light');
       }
     }
 
@@ -76,10 +90,11 @@ export default function Home() {
         <meta name='keywords' content='practice nepali typing online, nepali typing, nepali, typing, online' />
         <meta name="description" content="Practice Nepali Typing Online | Increase your nepali typing skills" />
         <meta name='viewport' content="width=device-width, initial-scale=1"></meta>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/joy.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
       </Head>
 
+      <Header />
       <Slider />
       <Texts />
       <Keyboard />
