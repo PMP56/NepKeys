@@ -19,14 +19,14 @@ export default function Home() {
     addUserText
   } = useContext(TextContext);
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('color');
 
   useEffect(() => {
     let theme = localStorage.getItem('theme');
     if (theme) {
       setTheme(theme);
     } else {
-      setTheme('light');
+      setTheme('color');
     }
   }, [0])
 
@@ -86,10 +86,7 @@ export default function Home() {
     <main className={`${styles.container} ${(theme == 'light') ? styles.light : (theme == 'dark') ? styles.dark : styles.color}`} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease}>
       <Head>
         <title>NepKeys : Practice Nepali Typing Online</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name='keywords' content='practice nepali typing online, nepali typing, nepali, typing, online' />
-        <meta name="description" content="Practice Nepali Typing Online | Increase your nepali typing skills" />
-        <meta name='viewport' content="width=device-width, initial-scale=1"></meta>
+        <meta name='viewport' content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/joy.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
       </Head>
