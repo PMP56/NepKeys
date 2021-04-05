@@ -87,6 +87,7 @@ export default function Home() {
       <Head>
         <meta name='viewport' content="width=device-width, initial-scale=1" />
         <title>NepKeys - Nepali Keyboard and Typing Practice Online</title>
+        <meta name="description" content="NepKeys is a free online Nepali typing practice site which provides you a better environment to learn typing and analytics which help you to track your progess." />
         <link rel="icon" href="/joy.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
       </Head>

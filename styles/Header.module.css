@@ -20,6 +20,10 @@
     font-size: 28px;
 }
 
+.hiddenText{
+    display: none;
+}
+
 .description{
     letter-spacing: 1px;
     font-size: 20px;
