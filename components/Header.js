@@ -13,9 +13,9 @@ const Header = () => {
                 </div>
                 <h2 className={styles.description}>Practice Nepali Typing Online</h2>
             </header>
-            <div className={styles.topDesContainer}>
+            {/* <div className={styles.topDesContainer}>
                 <h1 className={styles.topDescription}>NepKeys is a free online Nepali typing practice site which provides you a better environment to learn typing and analytics which help you to track your progess.</h1>
-            </div>
+            </div> */}
         </Fragment>
     );
 }

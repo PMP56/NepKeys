@@ -8,6 +8,7 @@
   --keyPressColor: #333;
   --keyPressTextColor: white;
   --animation: colorMove 2s ease 0;
+  --scoreButton: #333;
 }
 
 .dark{
@@ -20,6 +21,7 @@
   --keyPressColor: rgb(99, 99, 99);
   --keyPressTextColor: white;
   --animation: colorMove 3s ease 0;
+  --scoreButton: rgb(135, 135, 135);
 }
 
 .color{
@@ -32,6 +34,7 @@
   --keyPressColor: transparent ;
   --keyPressTextColor: white rgb(252, 53, 86);
   --animation: colorMove 10s ease infinite;
+  --scoreButton: rgb(172, 172, 172);
 }
 
 .container{
@@ -47,6 +50,22 @@
   font-weight: 900;
   font-family: Montserrat;
   transition-duration: 0.3s;
+}
+
+.toolBox{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttonBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+  color: var(--textColor);
 }
 
 .buttonContainer{

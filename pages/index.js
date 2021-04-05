@@ -3,7 +3,8 @@ import { useContext, useState, useEffect } from 'react';
 
 import Header from '../components/Header'
 import Keyboard from '../components/Keyboard'
-import Text from '../components/Texts'
+import Score from '../components/Score'
+
 import styles from '../styles/Home.module.css'
 
 import { TextContext } from '../components/TextContext'
@@ -76,8 +77,11 @@ export default function Home() {
     }
 
     return (
-      <div className={styles.buttonContainer}>
-        <button className={styles.themeButton} onClick={click}>{theme.toUpperCase()}</button>
+      <div className={styles.buttonBox}>
+        <div className={styles.buttonContainer}>
+          <button className={styles.themeButton} onClick={click}>{theme.toUpperCase()}</button>
+        </div>
+        <h3 className={styles.buttonName}>Change Theme</h3>
       </div>
     )
   }
@@ -93,7 +97,10 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Slider />
+      <div className={styles.toolBox}>
+        <Score />
+        <Slider />
+      </div>
       <Texts />
       <Keyboard />
     </main>
