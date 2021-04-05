@@ -86,8 +86,8 @@ export default function Home() {
     <main className={`${styles.container} ${(theme == 'light') ? styles.light : (theme == 'dark') ? styles.dark : styles.color}`} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease}>
       <Head>
         <meta name='viewport' content="width=device-width, initial-scale=1" />
-        <title>NepKeys - Nepali Keyboard and Typing Practice Online</title>
         <meta name="description" content="NepKeys is a free online Nepali typing practice site which provides you a better environment to learn typing and analytics which help you to track your progess." />
+        <title>NepKeys - Nepali Keyboard and Typing Practice Online</title>
         <link rel="icon" href="/joy.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
       </Head>

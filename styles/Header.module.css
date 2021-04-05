@@ -20,8 +20,18 @@
     font-size: 28px;
 }
 
-.hiddenText{
-    font-size: 0px;
+.topDesContainer{
+    width: 80%;
+    text-align: start;
+    color: var(--textColor);
+    top: -40px;
+    position: relative;
+}
+
+.topDescription{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
 }
 
 .description{
