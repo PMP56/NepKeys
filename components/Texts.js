@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styles from '../styles/Texts.module.css';
 
 import { TextContext } from './TextContext';
@@ -14,12 +14,30 @@ const Texts = () => {
         clearUserText
     } = useContext(TextContext);
 
+    const [prevElement, setPrevElement] = useState(null);
+
     useEffect(() => {
+        if (prevElement) {
+            prevElement.style.backgroundColor = 'var(--keyColor)';
+        }
+
+        let charVal = (TextList[currentSentenceIndex]).charCodeAt(currentLetterIndex);
+        let element;
+        if (charVal >= 65 && charVal <= 90) {
+            element = document.querySelector(`.key-${charVal}`);
+            element.style.backgroundColor = 'var(--keyHighlightColor)';
+            let element2 = document.querySelector(`.key-16`);
+            element2.style.backgroundColor = 'var(--keyHighlightColor)';
+        } else if (charVal >= 97 && charVal <= 122) {
+            element = document.querySelector(`.key-${charVal - 32}`);
+            element.style.backgroundColor = 'var(--keyHighlightColor)';
+        }
         if (currentLetterIndex == TextList[currentSentenceIndex].length) {
             changeSentenceIndex(currentSentenceIndex + 1);
             changeLetterIndex(0);
             clearUserText();
         }
+        setPrevElement(element);
     }, [currentLetterIndex])
 
     return (

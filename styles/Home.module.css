@@ -7,6 +7,7 @@
   --keyColor: white;
   --keyPressColor: #333;
   --keyPressTextColor: white;
+  --keyHighlightColor: rgb(255, 173, 243);
   --animation: colorMove 2s ease 0;
   --scoreButton: #333;
 }
@@ -20,6 +21,7 @@
   --keyColor: rgb(50, 50, 50);
   --keyPressColor: rgb(99, 99, 99);
   --keyPressTextColor: white;
+  --keyHighlightColor: rgba(255, 204, 247, 0.5);
   --animation: colorMove 3s ease 0;
   --scoreButton: rgb(135, 135, 135);
 }
@@ -33,6 +35,7 @@
   --keyColor: rgb(50, 50, 50);
   --keyPressColor: transparent ;
   --keyPressTextColor: white rgb(252, 53, 86);
+  --keyHighlightColor: rgb(129, 48, 118);
   --animation: colorMove 10s ease infinite;
   --scoreButton: rgb(172, 172, 172);
 }
