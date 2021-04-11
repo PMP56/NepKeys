@@ -90,7 +90,6 @@ export default function Home() {
     <main className={`${styles.container} ${(theme == 'light') ? styles.light : (theme == 'dark') ? styles.dark : styles.color}`} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease}>
       <Head>
         <meta name='viewport' content="width=device-width, initial-scale=1" />
-        <meta name="description" content="NepKeys is a free online Nepali typing practice site with Nepali Keyboard available where you can fluently learn nepali typing, calculate your typing speed and track your progress with the inbuilt analytics system." />
         <title>NepKeys - Nepali Keyboard and Nepali Typing Practice Online</title>
         <link rel="icon" href="/joy.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>

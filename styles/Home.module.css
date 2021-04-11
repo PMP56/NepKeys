@@ -36,7 +36,7 @@
   --keyPressColor: transparent ;
   --keyPressTextColor: white rgb(252, 53, 86);
   --keyHighlightColor: rgb(129, 48, 118);
-  --animation: colorMove 10s ease infinite;
+  --animation: colorMove 10s ease 0;
   --scoreButton: rgb(172, 172, 172);
 }
 
@@ -86,8 +86,8 @@
 
 
 .themeButton{
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   border-style: none;
   text-align: center;
@@ -95,6 +95,7 @@
   background-color: var(--keyColor);
   color: var(--textColor);
   transition-duration: 0.3s;
+  font-size: 12px;
   font-family: Montserrat;
   font-weight: 600;
   cursor: pointer;
