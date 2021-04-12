@@ -5,6 +5,7 @@
   }
 
 .textContainer{
+    width: 80%;
     margin: 25px;
 }
 
@@ -31,7 +32,7 @@
 }
 
 .textCorrect{
-    color: rgb(0, 99, 165);
+    color: rgb(9, 123, 199);
 }
 
 .textIncorrect{
