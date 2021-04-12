@@ -11,7 +11,11 @@ const Texts = () => {
         changeSentenceIndex,
         userText,
         addUserText,
-        clearUserText
+        clearUserText,
+        totalLetters,
+        changeTotalLetters,
+        totalCorrectLetters,
+        changeTotalCorrectLetters
     } = useContext(TextContext);
 
     const [prevElement, setPrevElement] = useState(null);
@@ -32,6 +36,7 @@ const Texts = () => {
             element = document.querySelector(`.key-${charVal - 32}`);
             element.style.backgroundColor = 'var(--keyHighlightColor)';
         }
+
         if (currentLetterIndex == TextList[currentSentenceIndex].length) {
             changeSentenceIndex(currentSentenceIndex + 1);
             changeLetterIndex(0);

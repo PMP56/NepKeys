@@ -5,8 +5,13 @@ export const TextContext = React.createContext()
 export const TextProvider = ({ children }) => {
     const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
     const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
-
     const [userText, setUserText] = useState([]);
+
+
+    //for score
+    const [totalLetters, setTotalLetters] = useState(0.00001);
+    const [totalCorrectLetters, setTotalCorrectLetters] = useState(0);
+    const [totalWords, setTotalWords] = useState(0);
 
     const changeLetterIndex = (val) => {
         setCurrentLetterIndex(val);
@@ -22,6 +27,15 @@ export const TextProvider = ({ children }) => {
     const clearUserText = () => {
         setUserText([]);
     }
+
+    const changeTotalLetters = (val) => {
+        setTotalLetters(val);
+    }
+
+    const changeTotalCorrectLetters = (val) => {
+        setTotalCorrectLetters(val);
+    }
+
     return (
         <TextContext.Provider
             value={{
@@ -31,7 +45,11 @@ export const TextProvider = ({ children }) => {
                 changeSentenceIndex: changeSentenceIndex,
                 userText: userText,
                 addUserText: addUserText,
-                clearUserText: clearUserText
+                clearUserText: clearUserText,
+                totalLetters: totalLetters,
+                changeTotalLetters: changeTotalLetters,
+                totalCorrectLetters: totalCorrectLetters,
+                changeTotalCorrectLetters: changeTotalCorrectLetters
             }}
         >
             {children}

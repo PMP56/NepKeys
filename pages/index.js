@@ -9,6 +9,7 @@ import styles from '../styles/Home.module.css'
 
 import { TextContext } from '../components/TextContext'
 import Texts from '../components/Texts';
+import { TextList } from '../components/TextList';
 
 export default function Home() {
   const {
@@ -17,7 +18,11 @@ export default function Home() {
     currentSentenceIndex,
     changeSentenceIndex,
     userText,
-    addUserText
+    addUserText,
+    totalLetters,
+    changeTotalLetters,
+    totalCorrectLetters,
+    changeTotalCorrectLetters
   } = useContext(TextContext);
 
   const [theme, setTheme] = useState('color');
@@ -31,7 +36,6 @@ export default function Home() {
     }
   }, [0])
 
-
   const buttonPress = (e) => {
     e.preventDefault();
     let keyCode = e.keyCode;
@@ -39,7 +43,14 @@ export default function Home() {
 
     if ((keyCode >= 65 && keyCode <= 90) || keyCode == 32) {
       changeLetterIndex(currentLetterIndex + 1);
+      changeTotalLetters(totalLetters + 1);
       addUserText(e.key);
+
+
+      //check if entered text is correct
+      if (e.key == (TextList[currentSentenceIndex])[currentLetterIndex]) {
+        changeTotalCorrectLetters(totalCorrectLetters + 1);
+      }
     }
 
     if (keyCode == 16 || keyCode == 17 || keyCode == 18) {
@@ -49,6 +60,7 @@ export default function Home() {
     }
     element.style.backgroundColor = 'var(--keyPressColor)';
     element.style.color = 'var(--keyPressTextColor)';
+
   }
   const buttonRelease = (e) => {
     let keyCode = e.keyCode;

@@ -101,6 +101,12 @@
   cursor: pointer;
 }
 
+.buttonName{
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  font-weight: 400;
+}
+
 @keyframes colorMove{
   0% {
     background-position:0% 50%

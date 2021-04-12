@@ -49,4 +49,14 @@
     font-family: Montserrat;
     font-weight: 600;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .buttonName{
+    font-size: 14px;
+    letter-spacing: 0.75px;
+    font-weight: 400;
   }
