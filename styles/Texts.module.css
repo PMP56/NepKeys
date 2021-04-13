@@ -1,6 +1,6 @@
 @font-face{
     font-family: Nepali;
-    src: url('../public/fonts/Preeti.otf') format("opentype");
+    src: url('../public/fonts/Deepmani.ttf') format("truetype");
     unicode-range: U+00-7F;
   }
 
@@ -11,10 +11,10 @@
 
 .textRow{
     margin: 0;
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 400;
     font-family: Nepali;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 

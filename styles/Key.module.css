@@ -1,11 +1,5 @@
-@font-face{
-    font-family: Nepali;
-    src: url('../public/fonts/Preeti.otf') format("opentype");
-    unicode-range: U+00-7F;
-  }
-
 #key{
-    height: 55px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,18 +9,6 @@
     border-radius: 2.5px;
     margin: 2px;
     color: var(--textColor);
-}
-
-.key p:nth-child(1){
-  font-family: Nepali;
-  font-size: 19px;
-  font-weight: 400;
-}
-
-.key p:nth-child(2){
-  font-family: Nepali;
-  font-size: 24px;
-  font-weight: 500;
 }
 
 .key{

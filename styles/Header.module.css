@@ -1,7 +1,7 @@
 .header{
     position: fixed;
     top: 0;
-    width: 80%;
+    width: 75%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,20 +18,6 @@
 .title{
     margin-left: 10px;
     font-size: 28px;
-}
-
-.topDesContainer{
-    width: 80%;
-    text-align: start;
-    color: var(--textColor);
-    top: -40px;
-    position: relative;
-}
-
-.topDescription{
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    font-weight: 400;
 }
 
 .description{

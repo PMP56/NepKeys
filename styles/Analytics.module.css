@@ -1,0 +1,12 @@
+.analytics{
+    width: 75%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart{
+    border: 2px solid white;
+}

@@ -4,11 +4,12 @@ import { useContext, useState, useEffect } from 'react';
 import Header from '../components/Header'
 import Keyboard from '../components/Keyboard'
 import Score from '../components/Score'
+import Texts from '../components/Texts'
+import Analytics from '../components/Analytics'
 
 import styles from '../styles/Home.module.css'
 
 import { TextContext } from '../components/TextContext'
-import Texts from '../components/Texts';
 import { TextList } from '../components/TextList';
 
 export default function Home() {
@@ -22,7 +23,9 @@ export default function Home() {
     totalLetters,
     changeTotalLetters,
     totalCorrectLetters,
-    changeTotalCorrectLetters
+    changeTotalCorrectLetters,
+    totalWords,
+    changeTotalWords
   } = useContext(TextContext);
 
   const [theme, setTheme] = useState('color');
@@ -46,10 +49,12 @@ export default function Home() {
       changeTotalLetters(totalLetters + 1);
       addUserText(e.key);
 
-
       //check if entered text is correct
       if (e.key == (TextList[currentSentenceIndex])[currentLetterIndex]) {
         changeTotalCorrectLetters(totalCorrectLetters + 1);
+        if (keyCode == 32) {
+          changeTotalWords(totalWords + 1);
+        }
       }
     }
 
@@ -108,12 +113,15 @@ export default function Home() {
       </Head>
 
       <Header />
-      <div className={styles.toolBox}>
-        <Score />
-        <Slider />
+      <div className={styles.mainBody}>
+        <div className={styles.toolBox}>
+          <Score />
+          <Slider />
+        </div>
+        <Texts />
+        <Keyboard />
       </div>
-      <Texts />
-      <Keyboard />
+      <Analytics />
     </main>
   )
 }

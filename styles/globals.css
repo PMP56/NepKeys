@@ -22,28 +22,16 @@ a {
   unicode-range: U+00-7F;
 }
 
-#key{
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 2.5px;
-  margin: 2px;
-  color: black;
-}
-
 .key p:nth-child(1){
-font-family: Nepali;
-font-size: 19px;
-font-weight: 400;
+  font-family: Nepali;
+  font-size: 19px;
+  font-weight: 400;
 }
 
 .key p:nth-child(2){
-font-family: Nepali;
-font-size: 24px;
-font-weight: 500;
+  font-family: Nepali;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 .key{

@@ -15,7 +15,9 @@ const Texts = () => {
         totalLetters,
         changeTotalLetters,
         totalCorrectLetters,
-        changeTotalCorrectLetters
+        changeTotalCorrectLetters,
+        totalWords,
+        changeTotalWords
     } = useContext(TextContext);
 
     const [prevElement, setPrevElement] = useState(null);
@@ -38,6 +40,7 @@ const Texts = () => {
         }
 
         if (currentLetterIndex == TextList[currentSentenceIndex].length) {
+            changeTotalWords(totalWords + 1);
             changeSentenceIndex(currentSentenceIndex + 1);
             changeLetterIndex(0);
             clearUserText();

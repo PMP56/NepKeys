@@ -12,6 +12,7 @@ export const TextProvider = ({ children }) => {
     const [totalLetters, setTotalLetters] = useState(0.00001);
     const [totalCorrectLetters, setTotalCorrectLetters] = useState(0);
     const [totalWords, setTotalWords] = useState(0);
+    const [totalCorrectWords, setTotalCorrectWords] = useState(0);
 
     const changeLetterIndex = (val) => {
         setCurrentLetterIndex(val);
@@ -36,6 +37,10 @@ export const TextProvider = ({ children }) => {
         setTotalCorrectLetters(val);
     }
 
+    const changeTotalWords = (val) => {
+        setTotalWords(val);
+    }
+
     return (
         <TextContext.Provider
             value={{
@@ -49,7 +54,9 @@ export const TextProvider = ({ children }) => {
                 totalLetters: totalLetters,
                 changeTotalLetters: changeTotalLetters,
                 totalCorrectLetters: totalCorrectLetters,
-                changeTotalCorrectLetters: changeTotalCorrectLetters
+                changeTotalCorrectLetters: changeTotalCorrectLetters,
+                totalWords: totalWords,
+                changeTotalWords: changeTotalWords
             }}
         >
             {children}

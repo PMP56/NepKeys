@@ -42,23 +42,29 @@
 
 .container{
   background-color: var(--backColor);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 13px;
   font-weight: 900;
   font-family: Montserrat;
   transition-duration: 0.3s;
 }
 
+.mainBody{
+  width: 75%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;align-items: center;
+  flex-direction: column;
+}
+
 .toolBox{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 

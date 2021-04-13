@@ -23,22 +23,29 @@
   }
   
   .buttonBox:hover:nth-child(1) .buttonContainer:first-child{
-    box-shadow: 0 -10px 60px 0px rgb(252, 53, 86);
+    box-shadow: 0 0px 30px 0px rgb(252, 53, 86);
     background: rgb(252, 53, 86);
   }
+
   .buttonBox:hover:nth-child(2) .buttonContainer:first-child{
-    box-shadow: 0 -10px 60px 0px rgb(8, 104, 168);
+    box-shadow: 0 0px 30px 0px rgb(8, 104, 168);
     background: rgb(8, 104, 168);
   }
+
   .buttonBox:hover:nth-child(3) .buttonContainer:first-child{
-    box-shadow: 0 -10px 60px 0px rgb(37, 219, 82);
+    box-shadow: 0 0px 30px 0px rgb(37, 219, 82);
     background: rgb(37, 219, 82);
+  }
+
+  .buttonBox:hover:nth-child(4) .buttonContainer:first-child{
+    box-shadow: 0 0px 30px 0px rgb(219, 216, 37);
+    background: rgb(219, 216, 37);
   }
   
   
   .button{
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border-style: none;
     text-align: center;
@@ -56,7 +63,7 @@
   }
 
   .buttonName{
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.75px;
     font-weight: 400;
   }
