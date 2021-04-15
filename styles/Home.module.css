@@ -1,6 +1,6 @@
 .light{
   --backColor: aliceblue;
-  --textColor: black;
+  --textColor: #333;
   --keyboardBackground: rgb(225, 225, 225);
   --keyboardBorder: rgb(120, 120, 120);
   --keyboardShadow: rgb(0 0 120 / 40%);

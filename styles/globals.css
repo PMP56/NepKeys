@@ -16,9 +16,28 @@ a {
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #999999; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #444; 
+}
+
 @font-face{
   font-family: Nepali;
-  src: url('../public/fonts/Preeti.otf') format("opentype");
+  src: url('../public/fonts/Deepmani.ttf') format("truetype");
   unicode-range: U+00-7F;
 }
 

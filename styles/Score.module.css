@@ -29,7 +29,7 @@
 
   .buttonBox:hover:nth-child(2) .buttonContainer:first-child{
     box-shadow: 0 0px 30px 0px rgb(8, 104, 168);
-    background: rgb(8, 104, 168);
+    background: rgb(10, 117, 189);
   }
 
   .buttonBox:hover:nth-child(3) .buttonContainer:first-child{

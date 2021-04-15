@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect, Fragment } from 'react';
 
 import Header from '../components/Header'
 import Keyboard from '../components/Keyboard'
@@ -25,10 +25,18 @@ export default function Home() {
     totalCorrectLetters,
     changeTotalCorrectLetters,
     totalWords,
-    changeTotalWords
+    changeTotalWords,
+    lettersVsAcc,
+    changeLetterVsAcc
   } = useContext(TextContext);
 
+  //for graph data
+  const [currentTotalLetters, setCurrentTotalLetters] = useState(0);
+  const [currentTotalCorrectLetters, setCurrentTotalCorrectLetters] = useState(0);
+  const [currentAccuracy, setCurrentAccuracy] = useState(0);
+
   const [theme, setTheme] = useState('color');
+  const [isOpenAnalytics, setIsOpenAnalytics] = useState(false);
 
   useEffect(() => {
     let theme = localStorage.getItem('theme');
@@ -39,6 +47,19 @@ export default function Home() {
     }
   }, [0])
 
+  const openAnalytics = () => {
+    setIsOpenAnalytics(!isOpenAnalytics);
+    setTimeout(() => {
+      if (!isOpenAnalytics) {
+        window.scrollTo({
+          top: 1000,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+    }, 5)
+  }
+
   const buttonPress = (e) => {
     e.preventDefault();
     let keyCode = e.keyCode;
@@ -46,15 +67,26 @@ export default function Home() {
 
     if ((keyCode >= 65 && keyCode <= 90) || keyCode == 32) {
       changeLetterIndex(currentLetterIndex + 1);
+      setCurrentTotalLetters(totalLetters + 1);
       changeTotalLetters(totalLetters + 1);
       addUserText(e.key);
 
       //check if entered text is correct
       if (e.key == (TextList[currentSentenceIndex])[currentLetterIndex]) {
+        setCurrentTotalCorrectLetters(totalCorrectLetters + 1);
         changeTotalCorrectLetters(totalCorrectLetters + 1);
         if (keyCode == 32) {
           changeTotalWords(totalWords + 1);
         }
+      }
+
+      if (Math.floor(totalLetters) % 3 == 0) {
+        console.log('5 down')
+        let accuracy = Math.ceil(totalCorrectLetters * 100 / totalLetters);
+        changeLetterVsAcc(prevState => ({
+          letters: [...prevState.letters, Math.floor(totalLetters)],
+          acc: [...prevState.acc, accuracy]
+        }));
       }
     }
 
@@ -115,13 +147,14 @@ export default function Home() {
       <Header />
       <div className={styles.mainBody}>
         <div className={styles.toolBox}>
-          <Score />
+          <Score openAnalytics={openAnalytics} />
           <Slider />
         </div>
         <Texts />
         <Keyboard />
       </div>
-      <Analytics />
+      {(isOpenAnalytics) ? <Analytics /> : <Fragment />}
+
     </main>
   )
 }

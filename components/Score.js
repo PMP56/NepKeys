@@ -3,7 +3,7 @@ import styles from '../styles/Score.module.css'
 
 import { TextContext } from './TextContext';
 
-const Score = () => {
+const Score = (props) => {
     const {
         currentLetterIndex,
         changeLetterIndex,
@@ -36,11 +36,11 @@ const Score = () => {
         )
     }
 
-    const GraphBox = () => {
+    const AnalyticsBox = () => {
         return (
             <div className={styles.buttonBox}>
-                <div className={styles.buttonContainer}>
-                    <div className={styles.button}>
+                <div className={styles.buttonContainer} id='analytics-false'>
+                    <div className={styles.button} onClick={props.openAnalytics}>
                         <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="32px" viewBox="0 0 24 24" width="32px" fill="var(--textColor)">
                             <g>
                                 <rect fill="none" height="24" width="24" />
@@ -65,7 +65,7 @@ const Score = () => {
             <Button name={'Accuracy'} value1={accuracy} value2={'%'} />
             <Button name={'Total Words'} value1={totalWords} value2={'words'} />
             <Button name={'Total Letters'} value1={Math.floor(totalLetters)} value2={'letters'} />
-            <GraphBox />
+            <AnalyticsBox />
             <Button name={'WPM'} value1={0} value2={''} />
         </div>
     );
