@@ -19,7 +19,6 @@
     border-radius: 50%;
     letter-spacing: 0.75px;
     transition-duration: 0.3s;
-    cursor: pointer;
   }
   
   .buttonBox:hover:nth-child(1) .buttonContainer:first-child{
@@ -38,8 +37,14 @@
   }
 
   .buttonBox:hover:nth-child(4) .buttonContainer:first-child{
-    box-shadow: 0 0px 30px 0px rgb(219, 216, 37);
-    background: rgb(219, 216, 37);
+    box-shadow: 0 0px 30px 0px rgb(240, 82, 213);
+    background: rgb(240, 82, 213);
+    cursor: pointer;
+  }
+  
+  .buttonBox:hover:nth-child(5) .svgButtonContainer:first-child{
+    box-shadow: 0 0px 60px 0px rgb(219, 216, 37);
+    cursor: pointer;
   }
   
   
@@ -55,7 +60,6 @@
     transition-duration: 0.3s;
     font-family: Montserrat;
     font-weight: 600;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,4 +70,60 @@
     font-size: 12px;
     letter-spacing: 0.75px;
     font-weight: 400;
+  }
+
+  .svgButtonContainer{
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .svgButton{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    border-style: none;
+    text-align: center;
+    outline: none;
+    background-color: var(--keyColor);
+    color: var(--textColor);
+    transition-duration: 0.3s;
+    font-family: Montserrat;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+  }
+
+  .svgMain {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 90px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+  }
+
+  .svgCircle {
+    stroke-dasharray: 269px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 4px;
+    stroke: rgb(219, 216, 37);
+    fill: none;
+    /* animation: countdown 10s linear 1 backwards; */
+  }
+
+  @keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+    }
+    to {
+      stroke-dashoffset: 269px;
+    }
   }

@@ -11,5 +11,14 @@ export const TextList = [
     "ter irrent errien ter irrient err ner ter tree tire",
     "ner erreline errient ter tire ter err irrelie ter relier",
     "irrient irrieter tire errent irrelie irrient trient err ter",
-    "a student should never confine himself to his schoolbooks only.",
+    "a student should never confine himself to his schoolbooks only",
+    "errient errel ret irrient terren tere ner irrelie ter irriet",
+    "errent ner irriet ere triet trient irrient irren ner triet",
+    "err tire relet erret err tire ner errent erren trient ner",
+    "tire ner tir irrel tire irrelin irrelet ter irrel ter ner ter",
+    "trient irrel ner tree tire tirelie tere err trient erren",
+    "ner triet tire err triet ter ere ner errent irrient ter rent",
+    "irrient tire err irrient tren irrient ter irrelet ter irrent",
+    "ner irrient reline ter ner retter ner ren errent irrentin",
+
 ]

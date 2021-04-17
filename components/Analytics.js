@@ -1,4 +1,4 @@
-import React, { createRef, useRef, useEffect, useState, useContext } from 'react';
+import React, { createRef, useRef, useEffect, useState, useContext, Fragment } from 'react';
 import styles from '../styles/Analytics.module.css';
 
 import { Line } from 'react-chartjs-2';
@@ -15,11 +15,15 @@ const Analytics = () => {
     const [yval, setYVal] = useState([]);
 
     useEffect(() => {
-        setVals(Object.values(lettersVsAcc));
-        setXVal(vals[0]);
-        setYVal(vals[1]);
-        console.log(xval, yval);
-    }, [lettersVsAcc]);
+        // setVals(Object.values(lettersVsAcc));
+        setXVal(Object.values(lettersVsAcc)[0]);
+        setYVal(Object.values(lettersVsAcc)[1]);
+    }, [0, lettersVsAcc]);
+
+    // useEffect(() => {
+    //     setXVal(Object.values(lettersVsAcc)[0]);
+    //     setYVal(Object.values(lettersVsAcc)[1]);
+    // }, [0])
 
     const data = {
         labels: xval,
@@ -73,6 +77,7 @@ const Analytics = () => {
                 height={100}
                 options={options}
             />
+            {(Object.values(lettersVsAcc)[0].length < 6) ? <h1 className={styles.noDataText}>Not Enough Data</h1> : <Fragment />}
         </div>
     );
 }
