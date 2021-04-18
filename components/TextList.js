@@ -1,6 +1,8 @@
 export const TextList = [
     "Text to type",
     "This is Prashanna Paudel",
+    "Nepal is a small but a beautiful country",
+    "We Nepales live in peace and harmony with each other",
     "tire ter tire irreline tire irrel err ner retine err ter",
     "trient err tire relier ner irrient ner ret irrientine ",
     "ter irrient tre tire ner err tire ter err ter err tire",
