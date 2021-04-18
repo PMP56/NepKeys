@@ -77,7 +77,7 @@ const Analytics = () => {
                 height={100}
                 options={options}
             />
-            {(Object.values(lettersVsAcc)[0].length < 6) ? <h1 className={styles.noDataText}>Not Enough Data</h1> : <Fragment />}
+            {(Object.values(lettersVsAcc)[0].length < 3) ? <h1 className={styles.noDataText}>Not Enough Data</h1> : <Fragment />}
         </div>
     );
 }

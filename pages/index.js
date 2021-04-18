@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useContext, useState, useEffect, Fragment } from 'react';
+import { useContext, useState, useEffect, useRef, Fragment } from 'react';
 
 import Header from '../components/Header'
 import Keyboard from '../components/Keyboard'
@@ -30,6 +30,8 @@ export default function Home() {
     changeLetterVsAcc
   } = useContext(TextContext);
 
+  const bodyRef = useRef();
+
   //for graph data
   const [currentTotalLetters, setCurrentTotalLetters] = useState(0);
   const [currentTotalCorrectLetters, setCurrentTotalCorrectLetters] = useState(0);
@@ -45,7 +47,14 @@ export default function Home() {
     } else {
       setTheme('color');
     }
+    // if (bodyRef && bodyRef.current) {
+    //   bodyRef.current.addEventListener('scroll', scrollStart)
+
+    // } else {
+    //   console.log('Boooo')
+    // }
   }, [0])
+
 
   const openAnalytics = () => {
     setIsOpenAnalytics(!isOpenAnalytics);
@@ -58,6 +67,11 @@ export default function Home() {
         });
       }
     }, 5)
+  }
+
+
+  const scrollStart = (e) => {
+    console.log('Weeee')
   }
 
   const buttonPress = (e) => {
@@ -136,7 +150,7 @@ export default function Home() {
   }
 
   return (
-    <main className={`${styles.container} ${(theme == 'light') ? styles.light : (theme == 'dark') ? styles.dark : styles.color}`} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease}>
+    <main ref={bodyRef} className={`whole ${styles.container} ${(theme == 'light') ? styles.light : (theme == 'dark') ? styles.dark : styles.color}`} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease} onScroll={scrollStart}>
       <Head>
         <meta name='viewport' content="width=device-width, initial-scale=1" />
         <title>NepKeys - Nepali Keyboard and Nepali Typing Practice Online</title>
@@ -153,6 +167,10 @@ export default function Home() {
         <Texts />
         <Keyboard />
       </div>
+      <div className={styles.information}>
+        <h4 className={styles.informationText}>NepKeys is an online Nepali typing practice site with different layouts of Nepali keyboard that helps you improve your Nepali typing skill with the analytics tool integrated inside the website. It is absolutely free to use and guides you along your journey of learning Nepali typing. It calculates your accuracy, total letter and words, words per minute and more importantly shows different graphs of how you improved throughout the process. It also saves your progress so that you can continue on where you last left. </h4>
+      </div>
+
       {(isOpenAnalytics) ? <Analytics /> : <Fragment />}
 
     </main>

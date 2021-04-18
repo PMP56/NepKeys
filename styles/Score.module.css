@@ -43,7 +43,7 @@
   }
   
   .buttonBox:hover:nth-child(5) .svgButtonContainer:first-child{
-    box-shadow: 0 0px 60px 0px rgb(219, 216, 37);
+    box-shadow: 0 0px 60px 0px rgb(255, 217, 0);
     cursor: pointer;
   }
   
@@ -114,7 +114,7 @@
     stroke-dashoffset: 0px;
     stroke-linecap: round;
     stroke-width: 4px;
-    stroke: rgb(219, 216, 37);
+    stroke: rgb(255, 217, 0);
     fill: none;
     /* animation: countdown 10s linear 1 backwards; */
   }

@@ -113,6 +113,23 @@
   font-weight: 400;
 }
 
+.information{
+  width: 75%;
+}
+
+.informationText{
+  color: var(--textColor);
+  letter-spacing: 0.75px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.informationText::first-letter{
+  font-size: 36px;
+  font-weight: 600;
+}
+
 @keyframes colorMove{
   0% {
     background-position:0% 50%
