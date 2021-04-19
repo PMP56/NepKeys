@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useContext, useState, useEffect, useRef, Fragment } from 'react';
+import { useContext, useState, useEffect, useRef, Fragment, forwardRef } from 'react';
 
 import Header from '../components/Header'
 import Keyboard from '../components/Keyboard'
@@ -30,7 +30,7 @@ export default function Home() {
     changeLetterVsAcc
   } = useContext(TextContext);
 
-  const bodyRef = useRef();
+  const navRef = useRef();
 
   //for graph data
   const [currentTotalLetters, setCurrentTotalLetters] = useState(0);
@@ -47,14 +47,27 @@ export default function Home() {
     } else {
       setTheme('color');
     }
-    // if (bodyRef && bodyRef.current) {
-    //   bodyRef.current.addEventListener('scroll', scrollStart)
-
-    // } else {
-    //   console.log('Boooo')
-    // }
   }, [0])
 
+  useEffect(() => {
+    document.querySelector('main').focus();
+    window.addEventListener('scroll', () => {
+      let nav = document.querySelector('header');
+      let logo = document.querySelector('#logo');
+      if (window.scrollY > 10) {
+        // console.log(window.scrollY);
+        nav.style.backgroundColor = 'var(--textColor)';
+        nav.style.color = 'var(--backColor)';
+        nav.style.opacity = 0.8;
+        logo.style.fill = 'var(--backColor)';
+      } else {
+        nav.style.backgroundColor = 'transparent';
+        nav.style.color = 'var(--textColor)';
+        nav.style.opacity = 1;
+        logo.style.fill = 'var(--textColor)';
+      }
+    });
+  }, [])
 
   const openAnalytics = () => {
     setIsOpenAnalytics(!isOpenAnalytics);
@@ -67,11 +80,6 @@ export default function Home() {
         });
       }
     }, 5)
-  }
-
-
-  const scrollStart = (e) => {
-    console.log('Weeee')
   }
 
   const buttonPress = (e) => {
@@ -95,7 +103,7 @@ export default function Home() {
       }
 
       if (Math.floor(totalLetters) % 3 == 0) {
-        console.log('5 down')
+        // console.log('5 down')
         let accuracy = Math.ceil(totalCorrectLetters * 100 / totalLetters);
         changeLetterVsAcc(prevState => ({
           letters: [...prevState.letters, Math.floor(totalLetters)],
@@ -150,7 +158,7 @@ export default function Home() {
   }
 
   return (
-    <main ref={bodyRef} className={`whole ${styles.container} ${(theme == 'light') ? styles.light : (theme == 'dark') ? styles.dark : styles.color}`} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease} onScroll={scrollStart}>
+    <main className={`whole ${styles.container} ${(theme == 'light') ? styles.light : (theme == 'dark') ? styles.dark : styles.color}`} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease}>
       <Head>
         <meta name='viewport' content="width=device-width, initial-scale=1" />
         <title>NepKeys - Nepali Keyboard and Nepali Typing Practice Online</title>

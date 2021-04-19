@@ -37,6 +37,9 @@ const Texts = () => {
         } else if (charVal >= 97 && charVal <= 122) {
             element = document.querySelector(`.key-${charVal - 32}`);
             element.style.backgroundColor = 'var(--keyHighlightColor)';
+        } else if (charVal == 32) {
+            element = document.querySelector(`.key-${charVal}`);
+            element.style.backgroundColor = 'var(--keyHighlightColor)';
         }
 
         if (currentLetterIndex == TextList[currentSentenceIndex].length) {

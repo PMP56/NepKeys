@@ -59,6 +59,7 @@
   display: flex;
   justify-content: center;align-items: center;
   flex-direction: column;
+  margin-top: 10px;
 }
 
 .toolBox{
@@ -123,6 +124,7 @@
   font-weight: 400;
   text-align: justify;
   line-height: 25px;
+  margin-bottom: 25px;
 }
 
 .informationText::first-letter{
