@@ -54,7 +54,7 @@ export default function Home() {
     window.addEventListener('scroll', () => {
       let nav = document.querySelector('header');
       let logo = document.querySelector('#logo');
-      if (window.scrollY > 10) {
+      if (window.scrollY > 40) {
         // console.log(window.scrollY);
         nav.style.backgroundColor = 'var(--textColor)';
         nav.style.color = 'var(--backColor)';

@@ -1,5 +1,6 @@
 export const TextList = [
     "Text to type",
+    // "k'/'if",
     "This is Prashanna Paudel",
     // "Nepal is a small but a beautiful country",
     // "We Nepales live in peace and harmony with each other",
