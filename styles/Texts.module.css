@@ -4,6 +4,21 @@
     unicode-range: U+00-7F;
   }
 
+@font-face {
+    font-family: English;
+    src: url('../public/fonts/Montserrat.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: Newari;
+    src: url('../public/fonts/ranjana.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: Hindi;
+    src: url('../public/fonts/Deepmani.ttf') format("truetype");
+  }
+
 .textContainer{
     width: 80%;
     margin: 25px;
@@ -11,10 +26,10 @@
 
 .textRow{
     margin: 0;
-    font-size: 36px;
+    font-size:  var(--typeText);
     font-weight: 400;
-    font-family: Nepali;
-    letter-spacing: 0.5px;
+    font-family: var(--lang);
+    letter-spacing: 1px;
 }
 
 

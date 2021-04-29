@@ -41,15 +41,30 @@ a {
   unicode-range: U+00-7F;
 }
 
+@font-face {
+  font-family: English;
+  src: url('../public/fonts/Montserrat.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: Newari;
+  src: url('../public/fonts/ranjana.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: Hindi;
+  src: url('../public/fonts/Deepmani.ttf') format("truetype");
+}
+
 .key p:nth-child(1){
-  font-family: Nepali;
-  font-size: 19px;
+  font-family: var(--lang);
+  font-size: var(--upperKey);
   font-weight: 400;
 }
 
 .key p:nth-child(2){
-  font-family: Nepali;
-  font-size: 24px;
+  font-family: var(--lang);
+  font-size: var(--lowerKey);
   font-weight: 300;
 }
 

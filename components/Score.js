@@ -60,6 +60,19 @@ const Score = (props) => {
         )
     }
 
+    const LanguageBox = () => {
+        return (
+            <div className={styles.buttonBox}>
+                <div className={styles.buttonContainer}>
+                    <div className={styles.button} onClick={props.openAnalytics}>
+                        <h3 style={{ margin: '0px', fontSize: '22px' }}>En</h3>
+                    </div>
+                </div>
+                <h3 className={styles.buttonName}>Language</h3>
+            </div>
+        )
+    }
+
     const WPMBox = () => {
         return (
             <div className={styles.buttonBox}>
@@ -83,6 +96,7 @@ const Score = (props) => {
             <Button name={'Total Letters'} value1={Math.floor(totalLetters)} value2={'letters'} />
             <AnalyticsBox />
             <WPMBox />
+            {/* <LanguageBox /> */}
             {/* <Button name={'WPM'} value1={0} value2={''} /> */}
         </div>
     );
