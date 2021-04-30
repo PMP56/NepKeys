@@ -63,7 +63,7 @@ export default function Body(props) {
                 <Keyboard />
             </div>
             <div className={styles.information}>
-                <h4 className={styles.informationText}>NepKeys is an online Nepali typing practice site with different layouts of Nepali keyboard that helps you improve your Nepali typing skill with the analytics tool integrated inside the website. It is absolutely free to use and guides you along your journey of learning Nepali typing. It calculates your accuracy, total letter and words, words per minute and more importantly shows different graphs of how you improved throughout the process. It also saves your progress so that you can continue on where you last left. </h4>
+                <h4 className={styles.informationText}>NepKeys is an online typing practice site with different themes and layouts of keyboard that helps you improve your typing skill with the analytics tool integrated inside the website. You can learn to type in various languages such as English, Nepali, Hindi and Newari with different keyboard for each language. It is absolutely free to use and guides you along your journey of learning typing. It calculates your accuracy, total letter and words, words per minute and more importantly shows different graphs of how you improved throughout the process. It also saves your progress so that you can continue on where you last left. </h4>
             </div>
 
             {(isOpenAnalytics) ? <Analytics /> : <Fragment />}

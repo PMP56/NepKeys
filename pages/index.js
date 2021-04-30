@@ -126,7 +126,7 @@ export default function Home(props) {
 
   return (
     <main className={`whole ${styles.container} ${(theme == 'light') ? styles.light : (theme == 'dark') ? styles.dark : styles.color}`} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease}>
-      <Header />
+      <Header lang={props.lang} />
       <Body lang={props.lang} fonts={props.fonts} theme={theme} clickSlider={clickSlider} />
     </main>
   )
