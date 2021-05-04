@@ -2,6 +2,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    height: 60px;
     display: flex;
     justify-content: center;
     z-index: 10;

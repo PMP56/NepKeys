@@ -22,7 +22,6 @@
     animation-duration: 0.75s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    animation-timing-function: ease-out;
 }
 
 .logoText{
@@ -34,7 +33,6 @@
     animation-duration: 0.75s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    animation-timing-function: ease-out;
 }
 
 .text{

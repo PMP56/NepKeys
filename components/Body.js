@@ -33,7 +33,7 @@ export default function Body(props) {
         setTimeout(() => {
             if (!isOpenAnalytics) {
                 window.scrollTo({
-                    top: 1000,
+                    top: 800,
                     left: 0,
                     behavior: 'smooth'
                 });
