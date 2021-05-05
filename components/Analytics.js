@@ -65,7 +65,7 @@ const Analytics = () => {
     }
 
     const globalData = {
-        labels: [...Array(70).keys()].map(foo => foo + 20),
+        labels: [...Array(71).keys()].map(foo => foo + 20),
         datasets: [
             {
                 label: 'Global WPM Score',
