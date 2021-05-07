@@ -37,8 +37,22 @@ const Texts = () => {
         } else if (charVal >= 97 && charVal <= 122) {
             element = document.querySelector(`.key-${charVal - 32}`);
             element.style.backgroundColor = 'var(--keyHighlightColor)';
+            let element2 = document.querySelector(`.key-16`);
+            element2.style.backgroundColor = 'var(--keyColor)';
         } else if (charVal == 32) {
             element = document.querySelector(`.key-${charVal}`);
+            element.style.backgroundColor = 'var(--keyHighlightColor)';
+        } else if (charVal >= 44 && charVal <= 47) {
+            element = document.querySelector(`.key-${charVal + 144}`);
+            element.style.backgroundColor = 'var(--keyHighlightColor)';
+        } else if (charVal >= 91 && charVal <= 93) {
+            element = document.querySelector(`.key-${charVal + 128}`);
+            element.style.backgroundColor = 'var(--keyHighlightColor)';
+        } else if (charVal == 59) {
+            element = document.querySelector(`.key-${charVal + 127}`);
+            element.style.backgroundColor = 'var(--keyHighlightColor)';
+        } else if (charVal == 59) {
+            element = document.querySelector(`.key-${charVal + 126}`);
             element.style.backgroundColor = 'var(--keyHighlightColor)';
         }
 

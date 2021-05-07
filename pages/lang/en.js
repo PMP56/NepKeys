@@ -14,7 +14,7 @@ const Body = () => {
                 <title>NepKeys - English Keyboard and English Typing Practice Online</title>
                 <link rel="icon" href="/joy.ico" />
             </Head>
-            <BodyPage lang="English" fonts={{ "text": "30px", "upperKey": "10px", "lowerKey": "18px" }} />
+            <BodyPage lang="English" fonts={{ "text": "24px", "upperKey": "10px", "lowerKey": "18px" }} />
         </Fragment>
     );
 }

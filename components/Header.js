@@ -14,7 +14,7 @@ const Header = (props) => {
                         <h1 className={styles.title}>NepKeys</h1>
                     </div>
                 </Link>
-                <h2 className={styles.description}>Practice {props.lang} Typing Online</h2>
+                <h1 className={styles.description}>Practice {props.lang} Typing Online</h1>
             </div>
         </header>
     );

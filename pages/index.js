@@ -48,7 +48,7 @@ export default function Home(props) {
         // console.log(window.scrollY);
         nav.style.backgroundColor = 'var(--textColor)';
         nav.style.color = 'var(--backColor)';
-        nav.style.opacity = 0.8;
+        nav.style.opacity = 0.9;
         logo.style.fill = 'var(--backColor)';
       } else {
         nav.style.backgroundColor = 'transparent';
@@ -65,7 +65,7 @@ export default function Home(props) {
     let keyCode = e.keyCode;
     let element;
 
-    if ((keyCode >= 65 && keyCode <= 90) || keyCode == 32) {
+    if ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 186 && keyCode <= 191) || (keyCode >= 219 && keyCode <= 222) || keyCode == 32) {
       changeLetterIndex(currentLetterIndex + 1);
       // setCurrentTotalLetters(totalLetters + 1);
       changeTotalLetters(totalLetters + 1);
@@ -81,7 +81,6 @@ export default function Home(props) {
       }
 
       if (Math.floor(totalLetters) % 3 == 0) {
-        // console.log('5 down')
         let accuracy = Math.ceil(totalCorrectLetters * 100 / totalLetters);
         changeLetterVsAcc(prevState => ({
           letters: [...prevState.letters, Math.floor(totalLetters)],
