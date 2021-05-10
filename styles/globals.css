@@ -37,13 +37,13 @@ a {
 
 @font-face{
   font-family: Nepali;
-  src: url('../public/fonts/Deepmani.ttf') format("truetype");
+  src: url('../public/fonts/Deepmani.woff2') format("truetype");
   unicode-range: U+00-7F;
 }
 
 @font-face {
   font-family: English;
-  src: url('../public/fonts/Montserrat.ttf') format("truetype");
+  src: url('../public/fonts/Montserrat.woff2') format("truetype");
 }
 
 @font-face {
@@ -53,7 +53,7 @@ a {
 
 @font-face {
   font-family: Hindi;
-  src: url('../public/fonts/Deepmani.ttf') format("truetype");
+  src: url('../public/fonts/Deepmani.woff2') format("truetype");
 }
 
 .key p:nth-child(1){
