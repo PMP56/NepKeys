@@ -118,6 +118,14 @@
   width: 75%;
 }
 
+.informationHeader{
+  margin: 0px;
+  color: var(--textColor);
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
 .informationText{
   color: var(--textColor);
   letter-spacing: 0.75px;
@@ -127,10 +135,10 @@
   margin-bottom: 25px;
 }
 
-.informationText::first-letter{
+/* .informationText::first-letter{
   font-size: 36px;
   font-weight: 600;
-}
+} */
 
 @keyframes colorMove{
   0% {

@@ -116,7 +116,16 @@
     stroke-width: 4px;
     stroke: rgb(255, 217, 0);
     fill: none;
-    /* animation: countdown 10s linear 1 backwards; */
+  }
+
+  .svgCircleOn{
+    stroke-dasharray: 269px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 4px;
+    stroke: rgb(255, 217, 0);
+    fill: none;
+    animation: countdown 61s linear 1 backwards;
   }
 
   @keyframes countdown {

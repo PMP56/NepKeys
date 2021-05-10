@@ -126,7 +126,12 @@ export default function Home(props) {
   return (
     <main className={`whole ${styles.container} ${(theme == 'light') ? styles.light : (theme == 'dark') ? styles.dark : styles.color}`} tabIndex="0" onKeyDown={buttonPress} onKeyUp={buttonRelease}>
       <Header lang={props.lang} />
-      <Body lang={props.lang} fonts={props.fonts} theme={theme} clickSlider={clickSlider} />
+      <Body lang={props.lang} fonts={props.fonts} theme={theme} clickSlider={clickSlider}>
+        {props.children ? props.children : <div className={styles.information}>
+          <h1 className={styles.informationHeader}>नेपाली - Nepali Typing Practice Online, Nepali Keyboard Layout, Nepali Typing Tutor and Typing Test Online</h1>
+          <h4 className={styles.informationText}>NepKeys is an online typing practice and typing test site with different themes and layouts of keyboard that helps you improve your typing skill with the analytics tool integrated inside the website. You can learn to type in various languages such as English, Nepali, Hindi and Newari with different keyboard for each language. It is absolutely free to use and guides you along your journey of learning fast and accuate typing. It calculates your accuracy, total letter and words, words per minute i.e typing speed and more importantly shows different graphs of how you improved throughout the process. It also saves your progress so that you can continue on where you last left. </h4>
+        </div>}
+      </Body>
     </main>
   )
 }

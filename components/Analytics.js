@@ -108,6 +108,7 @@ const Analytics = () => {
 
     return (
         <div className={styles.analytics}>
+            <h1 style={{ color: 'var(--textColor)' }}>Your Progress Graph</h1>
             <Line
                 data={data}
                 width={200}
