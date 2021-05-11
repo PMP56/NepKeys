@@ -56,7 +56,7 @@ export default function Body(props) {
         <Fragment>
             <div className={styles.mainBody}>
                 <div className={styles.toolBox}>
-                    <Score openAnalytics={openAnalytics} />
+                    <Score lang={props.lang} openAnalytics={openAnalytics} />
                     <Slider />
                 </div>
                 <Texts />

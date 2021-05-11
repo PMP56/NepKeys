@@ -2,6 +2,10 @@ import { useContext, useEffect, useState } from 'react';
 import styles from '../styles/Score.module.css'
 
 import { TextContext } from './TextContext';
+import Modal from 'react-modal';
+import Link from 'next/link';
+
+Modal.setAppElement('body');
 
 const Score = (props) => {
     const {
@@ -21,7 +25,21 @@ const Score = (props) => {
     } = useContext(TextContext);
 
     let accuracy = Math.ceil(totalCorrectLetters * 100 / totalLetters);
+    const [lang, setLang] = useState(props.lang);
 
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const openModal = () => {
+        setIsOpen(true);
+    }
+
+    const afterOpenModal = () => {
+        // references are now sync'd and can be accessed.
+        // subtitle.style.color = '#f00';
+    }
+
+    const closeModal = () => {
+        setIsOpen(false);
+    }
 
     const Button = (props) => {
         return (
@@ -65,8 +83,9 @@ const Score = (props) => {
         return (
             <div className={styles.buttonBox}>
                 <div className={styles.buttonContainer}>
-                    <div className={styles.button} onClick={props.openAnalytics}>
-                        <h3 style={{ margin: '0px', fontSize: '22px' }}>En</h3>
+                    <div className={styles.button} onClick={openModal}>
+                        {/* <h3 style={{ margin: '0px', fontSize: '22px' }}>En</h3> */}
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--textColor)"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" /></svg>
                     </div>
                 </div>
                 <h3 className={styles.buttonName}>Language</h3>
@@ -116,14 +135,41 @@ const Score = (props) => {
         )
     }
 
+    const LangCard = (props) => {
+        return (
+            <Link href={(props.link) ? `/lang/${props.link}` : '/'}>
+                <div style={(lang == props.lang) ? { border: '2px solid white', backgroundColor: 'rgb(100, 100, 100)' } : { border: '2px solid transparent' }} className={styles.LangCard}>
+                    {props.lang}
+                </div>
+            </Link>
+        )
+    }
+
     return (
         <div className={styles.scoreBox}>
             <Button name={'Accuracy'} value1={accuracy} value2={'%'} />
             <Button name={'Total Words'} value1={totalWords} value2={'words'} />
             <Button name={'Total Letters'} value1={Math.floor(totalLetters)} value2={'letters'} />
-            <AnalyticsBox />
             <WPMBox />
-            {/* <LanguageBox /> */}
+            <AnalyticsBox />
+            <LanguageBox />
+            <Modal
+                isOpen={modalIsOpen}
+                onAfterOpen={afterOpenModal}
+                onRequestClose={closeModal}
+                contentLabel="Example Modal"
+                className={styles.Modal}
+                overlayClassName={styles.Overlay}
+            >
+                <h2 className={styles.modalHeader}>Choose Language</h2>
+                <div className={styles.modalBody}>
+                    <LangCard lang={"Nepali"} />
+                    <LangCard lang={"English"} link={'en'} />
+                    <LangCard lang={"Hindi"} link={'in'} />
+                    <LangCard lang={"Newari"} link={'newa'} />
+                    <LangCard lang={"Russian"} link={'ru'} />
+                </div>
+            </Modal>
             {/* <Button name={'WPM'} value1={0} value2={''} /> */}
         </div>
     );
