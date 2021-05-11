@@ -1,12 +1,12 @@
 @font-face{
     font-family: Nepali;
-    src: url('../public/fonts/Deepmani.woff2') format("truetype");
+    src: url('../public/fonts/Deepmani.woff2') format("woff2");
     unicode-range: U+00-7F;
   }
 
 @font-face {
     font-family: English;
-    src: url('../public/fonts/Montserrat.woff2') format("truetype");
+    src: url('../public/fonts/Montserrat.woff2') format("woff2");
 }
 
 @font-face {
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: Hindi;
-    src: url('../public/fonts/Deepmani.woff2') format("truetype");
+    src: url('../public/fonts/Devlys.woff2') format("woff2");
   }
 
 .textContainer{
