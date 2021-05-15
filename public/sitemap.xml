@@ -11,6 +11,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://www.nepkeys.site/about/</loc>
+    <lastmod>2021-05-06T11:07:29+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.nepkeys.site/lang/en/</loc>
     <lastmod>2021-04-30T11:07:29+00:00</lastmod>
     <priority>1</priority>
@@ -18,17 +23,14 @@
   <url>
     <loc>https://www.nepkeys.site/lang/newa/</loc>
     <lastmod>2021-04-30T11:07:29+00:00</lastmod>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.nepkeys.site/lang/in/</loc>
     <lastmod>2021-04-30T11:07:29+00:00</lastmod>
-    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.nepkeys.site/about/</loc>
-    <lastmod>2021-05-06T11:07:29+00:00</lastmod>
-    <priority>0.6</priority>
+    <loc>https://www.nepkeys.site/lang/ru/</loc>
+    <lastmod>2021-04-30T11:07:29+00:00</lastmod>
   </url>
 
 
