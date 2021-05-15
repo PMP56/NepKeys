@@ -1,10 +1,13 @@
 import { useContext, useState, useEffect, useRef } from 'react';
 import Header from '../components/Header'
-import Body from '../components/Body'
+import dynamic from 'next/dynamic';
 
 import styles from '../styles/Home.module.css'
 import { TextContext } from '../components/TextContext'
 import { TextList } from '../components/TextList';
+
+const Body = dynamic(() => import('../components/Body'))
+// import Body from '../components/Body'
 
 export default function Home(props) {
   const {

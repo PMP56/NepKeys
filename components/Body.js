@@ -7,8 +7,8 @@ import Texts from './Texts'
 
 import styles from '../styles/Home.module.css'
 
-// import Analytics from './Analytics'
-const Analytics = dynamic(() => import('./Analytics'));
+import Analytics from './Analytics'
+// const Analytics = dynamic(() => import('./Analytics'));
 
 export default function Body(props) {
     const [isOpenAnalytics, setIsOpenAnalytics] = useState(false);
