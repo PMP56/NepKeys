@@ -1,22 +1,16 @@
-import Head from 'next/head'
 import { useContext, useState, useEffect, useRef } from 'react';
-
 import Header from '../components/Header'
 import Body from '../components/Body'
 
 import styles from '../styles/Home.module.css'
-
 import { TextContext } from '../components/TextContext'
 import { TextList } from '../components/TextList';
-import { route } from 'next/dist/next-server/server/router';
 
 export default function Home(props) {
   const {
     currentLetterIndex,
     changeLetterIndex,
     currentSentenceIndex,
-    changeSentenceIndex,
-    userText,
     addUserText,
     totalLetters,
     changeTotalLetters,
@@ -24,7 +18,6 @@ export default function Home(props) {
     changeTotalCorrectLetters,
     totalWords,
     changeTotalWords,
-    lettersVsAcc,
     changeLetterVsAcc
   } = useContext(TextContext);
 
@@ -41,22 +34,6 @@ export default function Home(props) {
 
   useEffect(() => {
     document.querySelector('main').focus();
-    window.addEventListener('scroll', () => {
-      let nav = document.querySelector('header');
-      let logo = document.querySelector('#logo');
-      if (window.scrollY > 40) {
-        // console.log(window.scrollY);
-        nav.style.backgroundColor = 'var(--textColor)';
-        nav.style.color = 'var(--backColor)';
-        nav.style.opacity = 0.9;
-        logo.style.fill = 'var(--backColor)';
-      } else {
-        nav.style.backgroundColor = 'transparent';
-        nav.style.color = 'var(--textColor)';
-        nav.style.opacity = 1;
-        logo.style.fill = 'var(--textColor)';
-      }
-    });
   }, [])
 
 
@@ -67,13 +44,11 @@ export default function Home(props) {
 
     if ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 186 && keyCode <= 191) || (keyCode >= 219 && keyCode <= 222) || keyCode == 32) {
       changeLetterIndex(currentLetterIndex + 1);
-      // setCurrentTotalLetters(totalLetters + 1);
       changeTotalLetters(totalLetters + 1);
       addUserText(e.key);
 
       //check if entered text is correct
       if (e.key == (TextList[currentSentenceIndex])[currentLetterIndex]) {
-        // setCurrentTotalCorrectLetters(totalCorrectLetters + 1);
         changeTotalCorrectLetters(totalCorrectLetters + 1);
         if (keyCode == 32) {
           changeTotalWords(totalWords + 1);

@@ -7,7 +7,6 @@ export const TextProvider = ({ children }) => {
     const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
     const [userText, setUserText] = useState([]);
 
-
     //for score
     const [totalLetters, setTotalLetters] = useState(0.00001);
     const [totalCorrectLetters, setTotalCorrectLetters] = useState(0);

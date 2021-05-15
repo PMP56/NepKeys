@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { useState, Fragment, useEffect } from 'react';
 
 import Keyboard from './Keyboard'
@@ -11,12 +10,9 @@ import styles from '../styles/Home.module.css'
 export default function Body(props) {
     const [isOpenAnalytics, setIsOpenAnalytics] = useState(false);
 
-    const [lang, setLang] = useState();
-
     useEffect(() => {
         let lang = props.lang
         let fonts = props.fonts
-        // setLang(props.lang)
         let main = document.querySelector('main')
         if (lang == undefined) {
             main.style.setProperty('--lang', 'Nepali')
@@ -33,7 +29,7 @@ export default function Body(props) {
         setTimeout(() => {
             if (!isOpenAnalytics) {
                 window.scrollTo({
-                    top: 800,
+                    top: 950,
                     left: 0,
                     behavior: 'smooth'
                 });

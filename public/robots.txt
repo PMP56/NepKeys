@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: YandexBot
 Allow: /
+
+Sitemap: https://www.nepkeys.site/sitemap.xml
