@@ -1,11 +1,14 @@
 import { useState, Fragment, useEffect } from 'react';
 
+import dynamic from 'next/dynamic'
 import Keyboard from './Keyboard'
 import Score from './Score'
 import Texts from './Texts'
-import Analytics from './Analytics'
 
 import styles from '../styles/Home.module.css'
+
+// import Analytics from './Analytics'
+const Analytics = dynamic(() => import('./Analytics'));
 
 export default function Body(props) {
     const [isOpenAnalytics, setIsOpenAnalytics] = useState(false);
@@ -34,7 +37,7 @@ export default function Body(props) {
                     behavior: 'smooth'
                 });
             }
-        }, 5)
+        }, 150)
     }
 
     const Slider = () => {
