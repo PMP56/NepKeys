@@ -6,8 +6,8 @@ import styles from '../styles/Home.module.css'
 import { TextContext } from '../components/TextContext'
 import { TextList } from '../components/TextList';
 
-const Body = dynamic(() => import('../components/Body'))
-// import Body from '../components/Body'
+// const Body = dynamic(() => import('../components/Body'))
+import Body from '../components/Body'
 
 export default function Home(props) {
   const {
