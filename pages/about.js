@@ -10,6 +10,7 @@ const About = () => {
                 <meta name='viewport' content="width=device-width, initial-scale=1" />
                 <title>NepKeys - Nepali Keyboard and Nepali Typing Practice Online</title>
                 <link rel="icon" href="/joy.ico" />
+                <link rel="canonical" href="https://www.nepkeys.site/about" />
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
             </Head>
             <NavBar />

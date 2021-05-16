@@ -12,8 +12,9 @@ const Body = () => {
                 <meta name='viewport' content="width=device-width, initial-scale=1" />
                 <meta key="description" name="description" content="NepKeys is an online Russian typing practice site with Russian Keyboard available where you can practice Russian typing online, calculate and improve your typing speed and track your progress with the inbuilt analytics system." />
                 <meta key="keywords" name="keywords" content="nepkeys, Russian typing, Russian typing practice, online typing, online Russian typing, type in Russian, type Russian, Russian type, typing tutor, Russian typeshala, improve Russian typing, fast Russian typing, improve typing spped, typing test, Russian typing for begineers, typing jobs, keyboard Russian, virtual keyboard, Russian keyboard, practice Russian typing, online, type in Russian, Russian online typing, type online Russian, type Russian, Russian type, Russian, typing speed, Russian typing speed, words per minuter, Russian typing jobs, typing freelancers" />
-                <title>NepKeys - Russian Keyboard and Russian Typing Practice Online</title>
+                <title>Russian Keyboard and Russian Typing Practice Online - NepKeys</title>
                 <link rel="icon" href="/joy.ico" />
+                <link rel="canonical" href="https://www.nepkeys.site/lang/ru" />
             </Head>
             <BodyPage lang="Russian" fonts={{ "text": "26px", "upperKey": "12px", "lowerKey": "20px" }}>
                 <div className={styles.information}>
