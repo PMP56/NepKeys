@@ -17,7 +17,7 @@ class MyDocument extends Document {
                     <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                     <meta name="google-site-verification" content="CU5g9PiCbtyvhI9HXwXV2P_rtS7m2JT14RG07ghVMA8" />
 
-                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
+                    {/* <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link> */}
                 </Head>
                 <body>
                     <Main />

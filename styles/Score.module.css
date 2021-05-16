@@ -37,7 +37,7 @@
   }
   
   .buttonBox:hover:nth-child(4) .svgButtonContainer:first-child{
-    box-shadow: 0 0px 60px 0px rgb(255, 217, 0);
+    box-shadow: 0 0px 60px 0px rgb(252, 152, 22);
     cursor: pointer;
   }
 
@@ -64,7 +64,6 @@
     background-color: var(--keyColor);
     color: var(--textColor);
     transition-duration: 0.3s;
-    font-family: Montserrat;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -96,7 +95,6 @@
     background-color: var(--keyColor);
     color: var(--textColor);
     transition-duration: 0.3s;
-    font-family: Montserrat;
     font-weight: 600;
     cursor: pointer;
     display: flex;
@@ -120,7 +118,7 @@
     stroke-dashoffset: 0px;
     stroke-linecap: round;
     stroke-width: 4px;
-    stroke: rgb(255, 217, 0);
+    stroke: rgb(252, 152, 22);
     fill: none;
   }
 
@@ -129,7 +127,7 @@
     stroke-dashoffset: 0px;
     stroke-linecap: round;
     stroke-width: 4px;
-    stroke: rgb(255, 217, 0);
+    stroke: rgb(252, 152, 22);
     fill: none;
     animation: countdown 61s linear 1 backwards;
   }
@@ -158,7 +156,7 @@
 
   .modalHeader{
     color: white;
-    font-family: Montserrat;
+    font-family: English;
     font-size: 28px;
     letter-spacing: 0.75px;
     text-align: center;
@@ -183,7 +181,7 @@
     border-radius: 5px;
     color: white;
     font-size: 18px;
-    font-family: Montserrat;
+    font-family: English;
     box-shadow: 0 3px 10px -10px #aaa;
     cursor: pointer;
     transition-duration: 0.3s;
@@ -192,6 +190,29 @@
   .LangCard:hover{
     background-color: rgb(85, 85, 85);
     
+  }
+
+  .countdownModal{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    padding: 0px 60px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(40, 40, 40, 0.8);
+    outline: 2px;
+  }
+
+  .countdownModalHeader{
+    color: teal;
+    font-family: English;
+    font-size: 100px;
+    letter-spacing: 0.75px;
+    text-align: center;
   }
 
   @keyframes countdown {

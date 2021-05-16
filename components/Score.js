@@ -3,6 +3,7 @@ import styles from '../styles/Score.module.css'
 import Modal from 'react-modal';
 import Link from 'next/link';
 
+import WPMBox from './WPM';
 import { TextContext } from './TextContext';
 
 Modal.setAppElement('body');
@@ -77,40 +78,6 @@ const Score = (props) => {
         )
     }
 
-    const WPMBox = () => {
-        const [time, setTime] = useState(60);
-        const [isTimerOn, setIsTimerOn] = useState(false);
-        useEffect(() => {
-            if (isTimerOn) {
-                startTimer()
-            }
-        }, [time])
-        const startTimer = (e) => {
-            setIsTimerOn(true)
-            return setTimeout(() => {
-                if (time > 1) {
-                    setTime(time - 1)
-                } else {
-                    setIsTimerOn(false)
-                    setTime(60)
-                }
-            }, 1000)
-        }
-        return (
-            <div className={styles.buttonBox} onClick={startTimer}>
-                <div className={styles.svgButtonContainer}>
-                    <div className={styles.svgButton}>
-                        <svg className={styles.svgMain}>
-                            <circle className={(isTimerOn) ? styles.svgCircleOn : styles.svgCircle} r="43" cx="45" cy="45"></circle>
-                        </svg>
-                        <h1 style={{ margin: '0px', fontSize: '36px' }}>{time}</h1>
-                        <h2 style={{ margin: '0px', fontSize: '11px', fontWeight: '300' }}>seconds</h2>
-                    </div>
-                </div>
-                <h3 className={styles.buttonName}>Certificate</h3>
-            </div>
-        )
-    }
 
     const LangCard = (props) => {
         return (
