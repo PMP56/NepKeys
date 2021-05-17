@@ -215,6 +215,156 @@
     text-align: center;
   }
 
+  .scoreModal{
+    position: absolute;
+    width: 80vw;
+    height: 85vh;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(40, 40, 40, 0.8);
+    outline: 2px;
+  }
+
+  .scoreModalHeader{
+    color: white;
+    font-family: English;
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 30px;
+  }
+
+  .scoreModalBody{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scoreModalLowerBody{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .scoreModalTiles:nth-child(1){
+    background: linear-gradient(to left, rgb(0, 217, 255), rgb(0, 135, 224));
+  }
+
+  .scoreModalTiles:nth-child(2){
+    background: linear-gradient(to left, rgb(212, 73, 31), rgb(250, 112, 0));
+  }
+
+  .scoreModalTiles:nth-child(3){
+    background: linear-gradient(to right, rgb(12, 170, 59), rgb(0, 224, 119));
+  }
+
+  .scoreModalTiles:nth-child(4){
+    background: linear-gradient(to left, rgb(216, 64, 216), rgb(245, 70, 99));
+  }
+
+  .scoreModalTiles{
+    width: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: English;
+    margin: 0px 20px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .scoreModalWPM{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: English;
+    margin: 0px 25px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scoreModalSmallText{
+    margin: 0px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    font-weight: 200;
+  }
+
+  .scoreModalBigText{
+    margin: 0px;
+    font-size: 24px;
+  }
+
+  .modalBodyGraph{
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    height: 50vh;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .scoreModalTilesWPM{
+    padding: 20px;
+    width: 25%;
+    height: 85%;
+    border-radius: 5px;
+    background: linear-gradient(to right, #d1263a,  #d64832);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: English;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scoreModalWPMUpper{
+    margin: 0px;
+    font-size: 15px;
+  }
+
+  .scoreModalWPMLower{
+    margin: 0px;
+    margin-top: 15px;
+    font-size: 72px;
+  }
+
+  .wpmIcon{
+    width: 60px;
+    height: 60px;
+  }
+
+  .modalGraph{
+    width: 65%;
+    position: relative;
+  }
+
+  .noDataText{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--textColor);
+}
+
   @keyframes countdown {
     from {
       stroke-dashoffset: 0px;

@@ -4,7 +4,7 @@ import styles from '../styles/Analytics.module.css';
 import { Line, Bar } from 'react-chartjs-2';
 import { TextContext } from '../components/TextContext';
 
-const Analytics = () => {
+export const ProgressGraph = () => {
     const {
         lettersVsAcc,
         changeLetterVsAcc
@@ -63,6 +63,20 @@ const Analytics = () => {
             }]
         }
     }
+    return (
+        <>
+            <Line
+                data={data}
+                width={200}
+                height={100}
+                options={options}
+            />
+            {(Object.values(lettersVsAcc)[0].length < 3) ? <h1 className={styles.noDataText}>Not Enough Data</h1> : <Fragment />}
+        </>
+    )
+}
+
+const Analytics = () => {
 
     const globalData = {
         labels: [...Array(71).keys()].map(foo => foo + 20),
@@ -109,13 +123,7 @@ const Analytics = () => {
     return (
         <div className={styles.analytics}>
             <h1 style={{ color: 'var(--textColor)' }}>Your Progress Graph</h1>
-            <Line
-                data={data}
-                width={200}
-                height={100}
-                options={options}
-            />
-            {(Object.values(lettersVsAcc)[0].length < 3) ? <h1 className={styles.noDataText}>Not Enough Data</h1> : <Fragment />}
+            <ProgressGraph />
             <h1 style={{ color: 'var(--textColor)' }}>Global Score (WPM)</h1>
             <Bar
                 data={globalData}
