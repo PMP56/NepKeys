@@ -78,7 +78,6 @@ const Score = (props) => {
         )
     }
 
-
     const LangCard = (props) => {
         return (
             <Link href={(props.link) ? `/lang/${props.link}` : '/'}>

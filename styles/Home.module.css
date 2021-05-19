@@ -116,6 +116,7 @@
 
 .information{
   width: 75%;
+  margin-bottom: 25px;
 }
 
 .informationHeader{
@@ -133,6 +134,23 @@
   text-align: justify;
   line-height: 25px;
   margin-bottom: 25px;
+}
+
+.features{
+  margin-top: 60px;
+  color: var(--textColor);
+  text-align: left;
+  font-size: 24px;
+}
+
+.featuresList{
+  color: var(--textColor);
+  text-align: left;
+}
+
+.featuresNumber{
+  font-size: 16px;
+  font-weight: 200;
 }
 
 /* .informationText::first-letter{

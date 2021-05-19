@@ -9,9 +9,18 @@ Modal.setAppElement('body');
 
 const WPMBox = () => {
     const {
+        currentLetterIndex,
+        changeLetterIndex,
+        currentSentenceIndex,
+        changeSentenceIndex,
+        addUserText,
         totalLetters,
+        changeTotalLetters,
         totalCorrectLetters,
+        changeTotalCorrectLetters,
         totalWords,
+        changeTotalWords,
+        changeLetterVsAcc,
     } = useContext(TextContext);
 
     let accuracy = Math.ceil(totalCorrectLetters * 100 / totalLetters);
@@ -38,7 +47,6 @@ const WPMBox = () => {
         }, 1000)
     }
 
-    //for countdown with audio 
     const [countdown, setCountdown] = useState(3);
     const [isCountdownOpen, setIsCountdownOpen] = useState(false);
 
@@ -50,6 +58,11 @@ const WPMBox = () => {
 
     const openCountdownModal = () => {
         setIsCountdownOpen(true);
+        changeTotalLetters(0.00001);
+        changeTotalCorrectLetters(0);
+        changeTotalWords(0);
+        changeLetterIndex(0);
+        changeSentenceIndex(0);
         audio.play()
         return setTimeout(() => {
             if (countdown > 1) {
