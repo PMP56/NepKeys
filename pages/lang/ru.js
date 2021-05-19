@@ -19,7 +19,18 @@ const Body = () => {
             <BodyPage lang="Russian" fonts={{ "text": "26px", "upperKey": "12px", "lowerKey": "20px" }}>
                 <div className={styles.information}>
                     <h1 className={styles.informationHeader}>Pусский - Russian Typing Practice Online, Russian Keyboard Layout, Russian Typing Tutor and Typing Test Online</h1>
-                    {/* <h4 className={styles.informationText}>NepKeys is an online typing practice and typing test site with different themes and layouts of keyboard that helps you improve your typing skill with the analytics tool integrated inside the website. You can learn to type in various languages such as English, Nepali, Hindi and Newari with different keyboard for each language. It is absolutely free to use and guides you along your journey of learning fast and accuate typing. It calculates your accuracy, total letter and words, words per minute i.e typing speed and more importantly shows different graphs of how you improved throughout the process. It also saves your progress so that you can continue on where you last left. </h4> */}
+                    <h4 className={styles.informationText}>NepKeys is an online typing practice and typing test site with different themes and layouts of keyboard that helps you improve your typing skill with the analytics tool integrated inside the website. You can learn to type in various languages such as English, Nepali, Hindi and Newari with different keyboard for each language. It is absolutely free to use and guides you along your journey of learning fast and accuate typing. It calculates your accuracy, total letter and words, words per minute i.e typing speed and more importantly shows different graphs of how you improved throughout the process. It also saves your progress so that you can continue on where you last left. </h4>
+                    <h1 className={styles.features}>
+                        Feature of NepKeys
+                    </h1>
+                    <ul className={styles.featuresList}>
+                        <li><h1 className={styles.featuresNumber}>Online Russian Typing Practice Anytime for Free</h1></li>
+                        <li><h1 className={styles.featuresNumber}>Russian Typing Tutor with Russian Keyboard Layout Available</h1></li>
+                        <li><h1 className={styles.featuresNumber}>Interchangeable Language to Practice Typing in Any Language</h1></li>
+                        <li><h1 className={styles.featuresNumber}>Typing Test to Calcualte Words Per Minute and Accuracy Percentage</h1></li>
+                        <li><h1 className={styles.featuresNumber}>Graphs and Charts to Show Your Progress Throughout and Compare with Other People.</h1></li>
+                        <li><h1 className={styles.featuresNumber}>Next Generation Easy to use Typeshala with Scientific Calculation and Accurate Result.</h1></li>
+                    </ul>
                 </div>
             </BodyPage>
         </Fragment>
