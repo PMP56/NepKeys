@@ -373,3 +373,10 @@
       stroke-dashoffset: 269px;
     }
   }
+
+  
+@media(max-width: 800px){
+  .scoreBox{
+    transform: scale(0.75) translateX(-25%);
+  }
+}

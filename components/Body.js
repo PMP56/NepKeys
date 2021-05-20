@@ -1,6 +1,5 @@
 import { useState, Fragment, useEffect } from 'react';
 
-import dynamic from 'next/dynamic'
 import Keyboard from './Keyboard'
 import Score from './Score'
 import Texts from './Texts'
@@ -53,14 +52,19 @@ export default function Body(props) {
 
     return (
         <Fragment>
-            <div className={styles.mainBody}>
-                <div className={styles.toolBox}>
-                    <Score lang={props.lang} openAnalytics={openAnalytics} />
-                    <Slider />
+            <div className={styles.wholeBody}>
+                <div className="ezoic-pub-ad-placeholder-101"></div>
+                <div className={styles.mainBody}>
+                    <div className={styles.toolBox}>
+                        <Score lang={props.lang} openAnalytics={openAnalytics} />
+                        <Slider />
+                    </div>
+                    <Texts />
+                    <Keyboard />
                 </div>
-                <Texts />
-                <Keyboard />
+                <div className="ezoic-pub-ad-placeholder-102"> </div>
             </div>
+            <div className="ezoic-pub-ad-placeholder-103"> </div>
             {props.children}
             {(isOpenAnalytics) ? <Analytics /> : <Fragment />}
         </Fragment>

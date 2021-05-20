@@ -18,10 +18,10 @@ const Keyboard = () => {
                 <Key class='key key-48'>) 0</Key>
                 <Key class='key key-189'>_ -</Key>
                 <Key class='key key-187'>+ =</Key>
-                <Key class='Backspace key-8'>Backspace</Key>
+                <Key class='Backspace key-8'> Backspace</Key>
             </div>
             <div className={styles.keyboardRow}>
-                <Key class='Tab key-9'>Tab</Key>
+                <Key class='Tab key-9'> Tab</Key>
                 <Key class='key key-81'>Q q</Key>
                 <Key class='key key-87'>W w</Key>
                 <Key class='key key-69'>E e</Key>
@@ -37,7 +37,7 @@ const Keyboard = () => {
                 <Key class='key Tab key-220'>| \</Key>
             </div>
             <div className={styles.keyboardRow}>
-                <Key class='CapsLock key-20'>CapsLock</Key>
+                <Key class='CapsLock key-20'> CapsLock</Key>
                 <Key class='key key-65'>A a</Key>
                 <Key class='key key-83'>S s</Key>
                 <Key class='key key-68'>D d</Key>
@@ -49,10 +49,10 @@ const Keyboard = () => {
                 <Key class='key key-76'>L l</Key>
                 <Key class='key key-186'>: ;</Key>
                 <Key class="key key-222">" '</Key>
-                <Key class='Enter key-13'>Enter</Key>
+                <Key class='Enter key-13'> Enter</Key>
             </div>
             <div className={styles.keyboardRow}>
-                <Key class='Shift ShiftLeft key-16'>Shift</Key>
+                <Key class='Shift ShiftLeft key-16'> Shift</Key>
                 <Key class='key key-90'>Z z</Key>
                 <Key class='key key-88'>X x</Key>
                 <Key class='key key-67'>C c</Key>
@@ -63,15 +63,15 @@ const Keyboard = () => {
                 <Key class='key key-188'>{'< ,'}</Key>
                 <Key class='key key-190'>{'> .'}</Key>
                 <Key class='key key-191'>? /</Key>
-                <Key class='Shift ShiftRight key-16'>Shift</Key>
+                <Key class='Shift ShiftRight key-16'> Shift</Key>
             </div>
             <div className={styles.keyboardRow}>
-                <Key class='Control ControlLeft key-17'>Ctrl</Key>
+                <Key class='Control ControlLeft key-17'> Ctrl</Key>
                 <Key class='Meta key-91'>⊞ Win</Key>
-                <Key class='Alt AltLeft key-18'>Alt</Key>
+                <Key class='Alt AltLeft key-18'> Alt</Key>
                 <Key class='space key-32'> </Key>
-                <Key class='Alt AltRight key-18'>Alt</Key>
-                <Key class='Control ControlRight key-17'>Ctrl</Key>
+                <Key class='Alt AltRight key-18'> Alt</Key>
+                <Key class='Control ControlRight key-17'> Ctrl</Key>
             </div>
         </div>
     );

@@ -50,3 +50,13 @@
 .space{
     flex: 8;
 }
+
+@media(max-width: 800px){
+    #key{
+        height: 30px;
+    }
+    
+    #key p:nth-child(1){
+        font-size: 0px;
+    }
+  }

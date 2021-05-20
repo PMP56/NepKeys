@@ -112,3 +112,14 @@ a {
 .space{
   flex: 8;
 }
+
+.ezoic-pub-ad-placeholder-101, .ezoic-pub-ad-placeholder-102{
+  height: 80vh;
+  width: 10%;
+}
+
+.ezoic-pub-ad-placeholder-103{
+  width: 75%;
+  height: 150px;
+  margin-bottom: 50px;
+}
