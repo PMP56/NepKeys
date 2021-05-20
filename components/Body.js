@@ -64,7 +64,7 @@ export default function Body(props) {
                 </div>
                 <div id="ezoic-pub-ad-placeholder-102"> </div>
             </div>
-            <div id="ezoic-pub-ad-placeholder-103"> </div>
+            <div id="ezoic-pub-ad-placeholder-104"> </div>
             {props.children}
             {(isOpenAnalytics) ? <Analytics /> : <Fragment />}
         </Fragment>
