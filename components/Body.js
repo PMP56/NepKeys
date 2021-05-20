@@ -53,7 +53,6 @@ export default function Body(props) {
     return (
         <Fragment>
             <div className={styles.wholeBody}>
-                {/* <div id="ezoic-pub-ad-placeholder-101"></div> */}
                 <div className={styles.mainBody}>
                     <div className={styles.toolBox}>
                         <Score lang={props.lang} openAnalytics={openAnalytics} />
@@ -62,9 +61,7 @@ export default function Body(props) {
                     <Texts />
                     <Keyboard />
                 </div>
-                <div id="ezoic-pub-ad-placeholder-102"> </div>
             </div>
-            <div id="ezoic-pub-ad-placeholder-104"> </div>
             {props.children}
             {(isOpenAnalytics) ? <Analytics /> : <Fragment />}
         </Fragment>
