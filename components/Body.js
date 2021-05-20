@@ -53,7 +53,7 @@ export default function Body(props) {
     return (
         <Fragment>
             <div className={styles.wholeBody}>
-                <div id="ezoic-pub-ad-placeholder-101"></div>
+                {/* <div id="ezoic-pub-ad-placeholder-101"></div> */}
                 <div className={styles.mainBody}>
                     <div className={styles.toolBox}>
                         <Score lang={props.lang} openAnalytics={openAnalytics} />
