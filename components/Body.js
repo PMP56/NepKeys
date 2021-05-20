@@ -31,7 +31,7 @@ export default function Body(props) {
         setTimeout(() => {
             if (!isOpenAnalytics) {
                 window.scrollTo({
-                    top: 950,
+                    top: 1250,
                     left: 0,
                     behavior: 'smooth'
                 });
@@ -53,7 +53,7 @@ export default function Body(props) {
     return (
         <Fragment>
             <div className={styles.wholeBody}>
-                <div className="ezoic-pub-ad-placeholder-101"></div>
+                <div id="ezoic-pub-ad-placeholder-101"></div>
                 <div className={styles.mainBody}>
                     <div className={styles.toolBox}>
                         <Score lang={props.lang} openAnalytics={openAnalytics} />
@@ -62,9 +62,9 @@ export default function Body(props) {
                     <Texts />
                     <Keyboard />
                 </div>
-                <div className="ezoic-pub-ad-placeholder-102"> </div>
+                <div id="ezoic-pub-ad-placeholder-102"> </div>
             </div>
-            <div className="ezoic-pub-ad-placeholder-103"> </div>
+            <div id="ezoic-pub-ad-placeholder-103"> </div>
             {props.children}
             {(isOpenAnalytics) ? <Analytics /> : <Fragment />}
         </Fragment>
