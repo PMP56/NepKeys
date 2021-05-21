@@ -14,6 +14,7 @@ const WPMBox = () => {
         currentSentenceIndex,
         changeSentenceIndex,
         addUserText,
+        clearUserText,
         totalLetters,
         changeTotalLetters,
         totalCorrectLetters,
@@ -58,10 +59,11 @@ const WPMBox = () => {
 
     const openCountdownModal = () => {
         setIsCountdownOpen(true);
+        changeLetterIndex(0);
+        clearUserText();
         changeTotalLetters(0.00001);
         changeTotalCorrectLetters(0);
         changeTotalWords(0);
-        changeLetterIndex(0);
         changeSentenceIndex(0);
         audio.play()
         return setTimeout(() => {
