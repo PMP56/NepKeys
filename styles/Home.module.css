@@ -67,6 +67,14 @@
   display: flex;
   justify-content: center;align-items: center;
   flex-direction: column;
+}
+
+.boxAd{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 75%;
   margin-bottom: 60px;
 }
 
