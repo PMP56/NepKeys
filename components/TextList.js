@@ -26,7 +26,7 @@
 
 // ]
 
-const shuffle = (array) => {
+export const shuffle = (array) => {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
     // While there remain elements to shuffle...

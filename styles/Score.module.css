@@ -175,12 +175,12 @@
     background-color: rgb(65, 65, 65);
     margin: 12px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     font-family: English;
     box-shadow: 0 3px 10px -10px #aaa;
     cursor: pointer;
@@ -190,6 +190,13 @@
   .LangCard:hover{
     background-color: rgb(85, 85, 85);
     
+  }
+
+  .langCardBottom{
+    margin: 2.5px;
+    font-weight: 200;
+    font-size: 18px;
+    letter-spacing: 0.75px;
   }
 
   .countdownModal{

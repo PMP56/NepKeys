@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 
 import { ProgressGraph } from './Analytics';
 import { TextContext } from './TextContext';
+import { shuffle, TextList } from './TextList';
 
 Modal.setAppElement('body');
 
@@ -53,11 +54,18 @@ const WPMBox = () => {
 
     useEffect(() => {
         if (isCountdownOpen) {
-            openCountdownModal()
+            openCountdownModal();
         }
     }, [countdown])
 
+    const shuffleFunc = () => {
+        // for (let i = 0; i <= 50; i++) {
+        shuffle(TextList)
+        // }
+    }
+
     const openCountdownModal = () => {
+        // for (let i = 0; i <= 50; i++) {
         setIsCountdownOpen(true);
         changeLetterIndex(0);
         clearUserText();
@@ -65,16 +73,21 @@ const WPMBox = () => {
         changeTotalCorrectLetters(0);
         changeTotalWords(0);
         changeSentenceIndex(0);
-        audio.play()
+        audio.play();
         return setTimeout(() => {
             if (countdown > 1) {
-                setCountdown(countdown - 1)
+                setCountdown(countdown - 1);
             } else {
                 setIsCountdownOpen(false)
                 setCountdown(3)
                 startTimer()
             }
         }, 1000)
+    }
+
+    const concurrentFunction = () => {
+        openCountdownModal();
+        shuffleFunc();
     }
 
     //for score modal
@@ -86,7 +99,7 @@ const WPMBox = () => {
 
     return (
         <>
-            <div className={styles.buttonBox} onClick={!(isTimerOn) ? openCountdownModal : () => { }} alt="Click to start">
+            <div className={styles.buttonBox} onClick={!(isTimerOn) ? concurrentFunction : () => { }} alt="Click to start">
                 <div className={styles.svgButtonContainer}>
                     <div className={styles.svgButton}>
                         <svg className={styles.svgMain}>
