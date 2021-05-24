@@ -192,13 +192,6 @@
     
   }
 
-  .langCardBottom{
-    margin: 2.5px;
-    font-weight: 200;
-    font-size: 18px;
-    letter-spacing: 0.75px;
-  }
-
   .countdownModal{
     position: absolute;
     width: 200px;

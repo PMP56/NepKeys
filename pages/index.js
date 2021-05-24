@@ -113,12 +113,12 @@ export default function Home(props) {
               Feature of NepKeys
             </h1>
             <ul className={styles.featuresList}>
-              <li><h1 className={styles.featuresNumber}>Nepali Typing Practice Online Anytime for Free</h1></li>
+              <li><h1 className={styles.featuresNumber}>Practice Nepali Typing Online Anytime for Free</h1></li>
               <li><h1 className={styles.featuresNumber}>Nepali Typing Tutor with Nepali Keyboard Layout Available</h1></li>
               <li><h1 className={styles.featuresNumber}>Interchangeable Language to Practice Typing in Any Language</h1></li>
               <li><h1 className={styles.featuresNumber}>Nepali Typing Test to Calcualte Words Per Minute and Accuracy Percentage</h1></li>
               <li><h1 className={styles.featuresNumber}>Graphs and Charts to Show Your Progress Throughout and Compare with Other People.</h1></li>
-              <li><h1 className={styles.featuresNumber}>Next Generation Easy to use Typeshala with Scientific Calculation and Accurate Result.</h1></li>
+              <li><h1 className={styles.featuresNumber}>Next Generation Easy to use Nepali Typeshala with Scientific Calculation and Accurate Result.</h1></li>
             </ul>
             <h1 className={styles.features}>
               Why is Nepali typing important and is it important to learn Nepali typing?

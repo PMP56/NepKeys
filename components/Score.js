@@ -83,7 +83,6 @@ const Score = (props) => {
             <Link href={(props.link) ? `/lang/${props.link}` : '/'}>
                 <div style={(lang == props.lang) ? { border: '2px solid white', backgroundColor: 'rgb(100, 100, 100)' } : { border: '2px solid transparent' }} className={styles.LangCard}>
                     {props.lang}
-                    <h2 style={{ fontFamily: `${props.lang}` }} className={styles.langCardBottom}>{props.lang}</h2>
                 </div>
             </Link>
         )

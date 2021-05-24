@@ -67,7 +67,7 @@ const Texts = () => {
 
     return (
         <div className={styles.textContainer}>
-            <div className={styles.textRow}>
+            <div className={styles.textRow} lang='ru'>
                 {
                     Array.from(TextList[currentSentenceIndex]).map((letter, index) =>
                         <label

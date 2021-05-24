@@ -59,6 +59,7 @@ a {
 @font-face {
   font-family: Russian;
   src: url('../public/fonts/rushin.woff2') format("woff2");
+  /* unicode-range: U+400-4FF; */
 }
 
 .key p:nth-child(1){

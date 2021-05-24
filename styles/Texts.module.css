@@ -17,7 +17,7 @@
 @font-face {
     font-family: Hindi;
     src: url('../public/fonts/Devlys.woff2') format("woff2");
-  }
+}
 
 .textContainer{
     width: 80%;
@@ -29,6 +29,7 @@
     font-size:  var(--typeText);
     font-weight: 400;
     font-family: var(--lang);
+    /* font-language-override: "TUR"; */
     letter-spacing: 1px;
 }
 

@@ -110,7 +110,7 @@ const WPMBox = () => {
                     </div>
                 </div>
                 <h3 style={{ fontSize: '14px', fontWeight: '600' }} className={styles.buttonName}>WPM Test</h3>
-                <audio ref={audioRef} id='audio' src='/countdown.ogg' />
+                <audio ref={audioRef} id='audio' src='/countdown.ogg' preload="auto" />
             </div>
             <Modal
                 isOpen={isCountdownOpen}
