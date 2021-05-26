@@ -1,16 +1,4 @@
-User-agent: AdIdxBot
-Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Nightbot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
+User-agent: *
+Disallow: 
 
 Sitemap: https://www.nepkeys.site/sitemap.xml

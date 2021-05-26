@@ -2,6 +2,7 @@ import styles from '../styles/Keyboard.module.css';
 import Key from './Key';
 
 const Keyboard = () => {
+
     return (
         <div className={styles.keyboardLayout}>
             <div className={styles.keyboardRow}>
