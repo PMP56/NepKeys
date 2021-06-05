@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
         <meta name='viewport' content="width=device-width, initial-scale=1" />
         <meta key="description" name="description" content="NepKeys is an online Nepali typing practice, typing tutor and typing test site with different layouts of traditional Nepali keyboard that helps you improve your Nepali typing skill with the analytics tool integrated inside the website. It is absolutely free to use and guides you along your journey of learning fast and accuate typing." />
         <meta key="keywords" name="keywords" content="nepkeys, nepali typing, nepali typing online, nepali typing practice, nepali typing practice online, practice nepali typing, practice nepali typing online, online typing practice, nepali typing tutor, nepali typing tutor online, nepali typeshala, easy nepali typing, easy nepali typing practice, sajilo nepali typing, sajilo nepali typing online, online nepali typing, type in nepali, type nepali, devanagari typing, devanagari typing practice, improve nepali typing, fast nepali typing, improve typing speed, typing test, nepali typing test, nepali typing for begineers, typing jobs, keyboard nepali, nepali keyboard, nepali keyboard layout, nepali online typing, type online nepali, nepali characters, nepali typing speed" />
-        <title>Nepali Typing Practice, Typing Tutor and Typing Test Online - NepKeys</title>
+        <title>Nepali Typing Practice Online, Typing Tutor and Typing Test - NepKeys</title>
         <link rel="icon" href="/joy.ico" />
         <link rel="canonical" href="https://www.nepkeys.site/" />
       </Head>

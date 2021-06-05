@@ -63,7 +63,7 @@
 
 .mainBody{
   width: 75%;
-  height: 85vh;
+  height: 78vh;
   display: flex;
   justify-content: center;align-items: center;
   flex-direction: column;
@@ -141,6 +141,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 8vh;
 }
 
 .informationHeader{
