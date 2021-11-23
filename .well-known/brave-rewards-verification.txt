@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: nepkeys.site
+Token: 363a2ac5d2bb39f66ae4c8f6a4e4df4bcf7040ab025612cf0ac99b0b718a2447
