@@ -3,7 +3,7 @@ SEOptimized Nepali Typing Practice tool online to practice and increase your typ
 Inbuilt timer to calculate wpm, accuracy and graph to show your progress all along.
 
 ## Running site at:
-https://www.nepkeys.site
+https://www.nepkeys.netlify.app
 
 ## Semrush website ranking for following keywords
 
