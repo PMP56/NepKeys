@@ -49,7 +49,7 @@ export default function Body(props) {
                 <div className={styles.buttonContainer}>
                     <button className={styles.themeButton} onClick={props.clickSlider}>{props.theme.toUpperCase()}</button>
                 </div>
-                <h3 className={styles.buttonName}>Change Theme</h3>
+                <h3 className={styles.buttonName}>Theme</h3>
             </div>
         )
     }

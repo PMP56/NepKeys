@@ -3,9 +3,9 @@
     background-size: 100% 100%;
     width: 100%;
     border: 2px solid var(--keyboardBorder);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 20px 80px -10px var(--keyboardShadow);
-    padding: 8px;
+    padding: 4px;
     transition-duration: 0.3s;
     animation: var(--animation);
 }

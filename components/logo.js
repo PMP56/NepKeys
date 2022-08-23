@@ -16,7 +16,7 @@ const Logo = () => {
         preserveAspectRatio="xMidYMid meet">
 
             <g transform="translate(0.000000,246.000000) scale(0.100000,-0.100000)"
-            fill="rgb(40, 218, 84)" stroke="none">
+            fill="var(--logoColor)" stroke="none">
                 <path d="M2410 1953 c-708 -422 -1407 -825 -1398 -805 3 8 131 248 361 677 80
                 149 143 271 142 273 -2 2 -102 0 -223 -4 l-219 -7 -18 -41 c-79 -183 -723
                 -1452 -806 -1590 -17 -26 -29 -50 -27 -52 7 -7 1553 816 1758 936 30 17 70 41

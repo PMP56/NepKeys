@@ -11,7 +11,9 @@
   --animation: colorMove 2s ease 0;
   --scoreButton: #333;
   --remText: #777;
-  --textCorrect: rgb(16, 118, 185);
+  /* --textCorrect: rgb(16, 118, 185); */
+  --textCorrect: #333;
+  --logoColor: #333;
 }
 
 .dark{
@@ -25,9 +27,11 @@
   --keyPressTextColor: white;
   --keyHighlightColor: rgba(255, 204, 247, 0.5);
   --animation: colorMove 3s ease 0;
-  --scoreButton: rgb(135, 135, 135);
-  --remText: rgb(173, 173, 173);
-  --textCorrect: rgb(85, 173, 231);
+  --scoreButton: #878787;
+  --remText: rgb(120, 120, 120);
+  --textCorrect: white;
+  --logoColor: rgb(37, 219, 82);
+  /* --textCorrect: rgb(37, 219, 82); */
 }
 
 .color{
@@ -43,7 +47,9 @@
   --animation: colorMove 10s ease 0;
   --scoreButton: rgb(172, 172, 172);
   --remText: rgb(173, 173, 173);
-  --textCorrect: rgb(85, 173, 231);
+  --textCorrect: white;
+  --logoColor: rgb(37, 219, 82);
+  /* --textCorrect: rgb(37, 219, 82); */
 }
 
 .container{
@@ -69,7 +75,7 @@
 
 .mainBody{
   /* color: rgb(40, 218, 84); */
-  width: 75%;
+  width: 80%;
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -82,8 +88,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 75%;
-  margin-bottom: 60px;
+  width: 80%;
+  margin-bottom: 40px;
 }
 
 .toolBox{
@@ -103,7 +109,7 @@
 }
 
 .buttonContainer{
-  padding: 4px;
+  padding: 3px;
   background: var(--keyboardBorder);
   border-radius: 50%;
   transition-duration: 0.3s;
@@ -133,13 +139,13 @@
 }
 
 .buttonName{
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.75px;
   font-weight: 400;
 }
 
 .information{
-  width: 75%;
+  width: 85%;
   margin-bottom: 25px;
 }
 

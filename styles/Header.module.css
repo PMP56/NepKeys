@@ -10,7 +10,8 @@
 }
 
 .headerContainer{
-    width: 75%;
+    width: 80%;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +29,7 @@
     margin-left: 5px;
     font-size: 26px;
     font-weight: 600;
-    color: rgb(40, 218, 84);
+    color: var(--logoColor);
     font-family: Montserrat;
 }
 

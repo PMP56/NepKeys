@@ -76,8 +76,8 @@
         color: white; */
     }
 
-    40%{
-        text-decoration: underline solid 2px;
+    50%{
+        text-decoration: underline solid rgb(37, 219, 82) 2px;
         /* background-color: white;
         color: black; */
     }

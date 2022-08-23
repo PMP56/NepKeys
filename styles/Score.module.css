@@ -10,11 +10,11 @@
     align-items: center;
     transition-duration: 0.3s;
     color: var(--textColor);
-    margin: 20px;
+    margin: 30px 20px;
 }
 
 .buttonContainer{
-    padding: 4px;
+    padding: 3px;
     background: var(--scoreButton);
     border-radius: 50%;
     letter-spacing: 0.75px;
