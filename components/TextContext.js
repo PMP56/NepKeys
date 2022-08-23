@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 export const TextContext = React.createContext()
 
 export const TextProvider = ({ children }) => {
+    const [lang, setLang] = useState('np');
     const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
     const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
     const [userText, setUserText] = useState([]);
@@ -15,6 +16,10 @@ export const TextProvider = ({ children }) => {
 
     //for graph
     const [lettersVsAcc, setLettersVsAcc] = useState({ letters: [], acc: [] });
+
+    const changeLang = (val) => {
+        setLang(val);
+    }
 
     const changeLetterIndex = (val) => {
         setCurrentLetterIndex(val);
@@ -54,6 +59,8 @@ export const TextProvider = ({ children }) => {
     return (
         <TextContext.Provider
             value={{
+                lang: lang,
+                changeLang: changeLang,
                 currentLetterIndex: currentLetterIndex,
                 changeLetterIndex: changeLetterIndex,
                 currentSentenceIndex: currentSentenceIndex,

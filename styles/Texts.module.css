@@ -33,22 +33,34 @@
     letter-spacing: 1px;
 }
 
+.textRowBottom{
+    margin: 0;
+    margin-top: 6px;
+    font-size:  var(--typeText);
+    font-weight: 400;
+    font-family: var(--lang);
+    /* font-language-override: "TUR"; */
+    letter-spacing: 1px;
+    color: var(--remText);
+    font-size: large;
+}
 
 #textCurrent{
     animation-name: cursorMove;
     animation-duration: 0.9s;
     animation-iteration-count: infinite;
-    color: var(--textColor);
+    color: var(--remText);
     transition-duration: 0.3s;
+    padding-bottom: 3px;
 }
 
 .textRem{
-    color: var(--textColor);
+    color: var(--remText);
     transition-duration: 0.3s;
 }
 
 .textCorrect{
-    color: rgb(9, 123, 199);
+    color: var(--textCorrect);
 }
 
 .textIncorrect{

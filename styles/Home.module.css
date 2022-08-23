@@ -10,6 +10,8 @@
   --keyHighlightColor: rgb(255, 173, 243);
   --animation: colorMove 2s ease 0;
   --scoreButton: #333;
+  --remText: #777;
+  --textCorrect: rgb(16, 118, 185);
 }
 
 .dark{
@@ -24,6 +26,8 @@
   --keyHighlightColor: rgba(255, 204, 247, 0.5);
   --animation: colorMove 3s ease 0;
   --scoreButton: rgb(135, 135, 135);
+  --remText: rgb(173, 173, 173);
+  --textCorrect: rgb(85, 173, 231);
 }
 
 .color{
@@ -38,6 +42,8 @@
   --keyHighlightColor: rgb(129, 48, 118);
   --animation: colorMove 10s ease 0;
   --scoreButton: rgb(172, 172, 172);
+  --remText: rgb(173, 173, 173);
+  --textCorrect: rgb(85, 173, 231);
 }
 
 .container{

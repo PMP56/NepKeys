@@ -1,4 +1,4 @@
-import { useState, Fragment, useEffect } from 'react';
+import { useState, Fragment, useEffect, useContext } from 'react';
 
 import Keyboard from './Keyboard'
 import Score from './Score'
@@ -7,22 +7,26 @@ import Texts from './Texts'
 import styles from '../styles/Home.module.css'
 
 import Analytics from './Analytics'
+import { TextContext } from './TextContext';
 // const Analytics = dynamic(() => import('./Analytics'));
 
 export default function Body(props) {
     const [isOpenAnalytics, setIsOpenAnalytics] = useState(false);
-
+    const { changeLang } = useContext(TextContext);
+    
     useEffect(() => {
         let lang = props.lang
         let fonts = props.fonts
         let main = document.querySelector('main')
         if (lang == undefined) {
             main.style.setProperty('--lang', 'Nepali')
+            changeLang('Nepali');
         } else {
             main.style.setProperty('--lang', props.lang)
             main.style.setProperty('--typeText', props.fonts["text"])
             main.style.setProperty('--upperKey', props.fonts["upperKey"])
             main.style.setProperty('--lowerKey', props.fonts["lowerKey"])
+            changeLang(props.lang);
         }
     }, [0])
 

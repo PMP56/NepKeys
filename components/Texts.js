@@ -5,17 +5,13 @@ import { TextContext } from './TextContext';
 import { TextList } from './TextList';
 const Texts = () => {
     const {
+        lang,
         currentLetterIndex,
         changeLetterIndex,
         currentSentenceIndex,
         changeSentenceIndex,
         userText,
-        addUserText,
         clearUserText,
-        totalLetters,
-        changeTotalLetters,
-        totalCorrectLetters,
-        changeTotalCorrectLetters,
         totalWords,
         changeTotalWords
     } = useContext(TextContext);
@@ -72,11 +68,19 @@ const Texts = () => {
                     Array.from(TextList[currentSentenceIndex]).map((letter, index) =>
                         <label
                             className={index > currentLetterIndex ? `${styles.textRem}` : letter == userText[index] ? `${styles.textCorrect}` : `${styles.textIncorrect}`}
+                            style={(lang == "English")? {fontWeight: 800} : {fontWeight: 400}}
                             id={index == currentLetterIndex ? `${styles.textCurrent}` : `${styles.text}`}
                             key={index}>
                             {letter}
                         </label>)
                 }
+            </div>
+            <div 
+                className={styles.textRowBottom}
+                style={(lang == "Nepali" || lang == "Hindi")? {fontSize: 25} : {fontSize: "large"}}
+                            
+            >
+                {TextList[currentSentenceIndex + 1]}
             </div>
         </div>
     );
