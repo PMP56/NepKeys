@@ -66,11 +66,8 @@ export default function Body(props) {
                     <Keyboard />
                 </div>
             </div>
-            <div className={styles.boxAd}>
-                <div id="ezoic-pub-ad-placeholder-116"></div>
-                <div id="ezoic-pub-ad-placeholder-117"></div>
-                <div id="ezoic-pub-ad-placeholder-118"></div>
-            </div>
+            <div className={styles.boxAd}></div>
+                
             {props.children}
             {(isOpenAnalytics) ? <Analytics /> : <Fragment />}
         </Fragment>

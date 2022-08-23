@@ -62,6 +62,11 @@ a {
   /* unicode-range: U+400-4FF; */
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url('../public/fonts/Montserrat-SemiBold.ttf') format("truetype");
+}
+
 .key p:nth-child(1){
   font-family: var(--lang);
   font-size: var(--upperKey);

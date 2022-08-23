@@ -32,12 +32,13 @@
   }
 
   .buttonBox:hover:nth-child(3) .buttonContainer:first-child{
-    box-shadow: 0 0px 30px 0px rgb(37, 219, 82);
-    background: rgb(37, 219, 82);
+    /* box-shadow: 0 0px 30px 0px rgb(37, 219, 82); */
+    box-shadow: 0 0px 30px 0px rgb(252, 152, 22);
+    background: rgb(252, 152, 22);
   }
   
   .buttonBox:hover:nth-child(4) .svgButtonContainer:first-child{
-    box-shadow: 0 0px 60px 0px rgb(252, 152, 22);
+    box-shadow: 0 0px 70px 0px rgb(37, 219, 82);
     cursor: pointer;
   }
 
@@ -81,6 +82,7 @@
     transition-duration: 0.3s;
     cursor: pointer;
     border-radius: 50%;
+    background-color: rgb(37, 219, 82);
   }
 
   .svgButton{
@@ -118,11 +120,11 @@
     stroke-dashoffset: 0px;
     stroke-linecap: round;
     stroke-width: 4px;
-    stroke: rgb(252, 152, 22);
+    stroke: rgb(37, 219, 82);
     fill: none;
   }
 
-  .svgCircleOn{
+  /* .svgCircleOn{
     stroke-dasharray: 269px;
     stroke-dashoffset: 0px;
     stroke-linecap: round;
@@ -130,7 +132,7 @@
     stroke: rgb(252, 152, 22);
     fill: none;
     animation: countdown 61s linear 1 backwards;
-  }
+  } */
 
   .Modal{
     position: absolute;

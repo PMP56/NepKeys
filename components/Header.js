@@ -9,10 +9,10 @@ const Header = (props) => {
                 <Link href='/'>
                     <div className={styles.logoBox}>
                         <Logo />
-                        <h1 className={styles.title}>NepKeys</h1>
+                        <h1 className={styles.title}>NEPKEYS</h1>
                     </div>
                 </Link>
-                <h1 className={styles.description}>Practice {props.lang} Typing Online</h1>
+                {/* <h1 className={styles.description}>Practice {props.lang} Typing Online</h1> */}
             </div>
         </header>
     );

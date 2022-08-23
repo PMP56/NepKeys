@@ -68,10 +68,12 @@
 }
 
 .mainBody{
+  /* color: rgb(40, 218, 84); */
   width: 75%;
-  height: 78vh;
+  height: 80vh;
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 

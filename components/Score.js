@@ -32,8 +32,8 @@ const Score = (props) => {
             <div className={styles.buttonBox}>
                 <div className={styles.buttonContainer}>
                     <div className={styles.button}>
-                        <h3 style={{ margin: '0px', fontSize: '22px' }}>{props.value1}</h3>
-                        <h2 style={{ margin: '0px', fontSize: '11px', fontWeight: '300' }}>{props.value2}</h2>
+                        <h3 style={{ margin: '0px', fontSize: '20px' }}>{props.value1}</h3>
+                        <h2 style={{ margin: '0px', fontSize: '10px', fontWeight: '300' }}>{props.value2}</h2>
                     </div>
                 </div>
                 <h3 className={styles.buttonName}>{props.name}</h3>

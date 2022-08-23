@@ -77,7 +77,7 @@ const Texts = () => {
             </div>
             <div 
                 className={styles.textRowBottom}
-                style={(lang == "Nepali" || lang == "Hindi")? {fontSize: 25} : {fontSize: "large"}}
+                style={(lang == "Nepali" || lang == "Hindi")? {fontSize: 28} : {fontSize: "larger"}}
                             
             >
                 {TextList[currentSentenceIndex + 1]}

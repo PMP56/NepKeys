@@ -25,13 +25,17 @@
 }
 
 .title{
-    margin-left: 10px;
-    font-size: 28px;
+    margin-left: 5px;
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(40, 218, 84);
+    font-family: Montserrat;
 }
 
 .description{
     letter-spacing: 1px;
     font-size: 20px;
+    color: rgb(40, 218, 84);
 }
 
 
