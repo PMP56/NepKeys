@@ -31,6 +31,10 @@ export const TextProvider = ({ children }) => {
         setUserText([]);
     }
 
+    const popUserText = () => {
+        setUserText(userText.slice(0, userText.length - 1))
+    }
+
     const changeTotalLetters = (val) => {
         setTotalLetters(val);
     }
@@ -57,6 +61,7 @@ export const TextProvider = ({ children }) => {
                 userText: userText,
                 addUserText: addUserText,
                 clearUserText: clearUserText,
+                popUserText: popUserText,
                 totalLetters: totalLetters,
                 changeTotalLetters: changeTotalLetters,
                 totalCorrectLetters: totalCorrectLetters,

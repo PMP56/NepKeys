@@ -15,6 +15,7 @@ export default function Home(props) {
     changeLetterIndex,
     currentSentenceIndex,
     addUserText,
+    popUserText,
     totalLetters,
     changeTotalLetters,
     totalCorrectLetters,
@@ -64,6 +65,15 @@ export default function Home(props) {
           letters: [...prevState.letters, Math.floor(totalLetters)],
           acc: [...prevState.acc, accuracy]
         }));
+      }
+    }
+
+    if (keyCode == 8){
+      if (currentLetterIndex > 0){
+        changeLetterIndex(currentLetterIndex - 1);
+        popUserText();
+        // changeTotalLetters(totalLetters - 1);
+        // addUserText(e.key);
       }
     }
 
