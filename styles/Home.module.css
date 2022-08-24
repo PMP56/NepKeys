@@ -28,9 +28,9 @@
   --keyHighlightColor: rgba(255, 204, 247, 0.5);
   --animation: colorMove 3s ease 0;
   --scoreButton: #878787;
-  --remText: rgb(120, 120, 120);
+  --remText: rgb(100, 100, 100);
   --textCorrect: white;
-  --logoColor: rgb(37, 219, 82);
+  --logoColor: rgb(64, 230, 105);
   /* --textCorrect: rgb(37, 219, 82); */
 }
 
@@ -46,9 +46,9 @@
   --keyHighlightColor: rgb(129, 48, 118);
   --animation: colorMove 10s ease 0;
   --scoreButton: rgb(172, 172, 172);
-  --remText: rgb(173, 173, 173);
+  --remText: rgb(130, 130, 130);
   --textCorrect: white;
-  --logoColor: rgb(37, 219, 82);
+  --logoColor: rgb(64, 230, 105);
   /* --textCorrect: rgb(37, 219, 82); */
 }
 
@@ -89,7 +89,7 @@
   justify-content: space-evenly;
   align-items: center;
   width: 80%;
-  margin-bottom: 40px;
+  height: 40px;
 }
 
 .toolBox{

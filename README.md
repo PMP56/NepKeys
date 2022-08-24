@@ -19,7 +19,7 @@
     <img src="./public/nepkeys.svg" alt="Logo" width="80" height="80">
   </a>
 
-  ## Nepkeys
+  <h2 align="center">NepKeys</h2>
 
   <p align="center">
     SEOptimized Typing Practice website to practice and increase your typing speed.

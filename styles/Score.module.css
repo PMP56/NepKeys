@@ -49,11 +49,16 @@
   }
   
   .buttonBox:hover:nth-child(6) .buttonContainer:first-child{
-    box-shadow: 0 0px 60px 0px cyan;
-    background: cyan;
+    box-shadow: 0 0px 30px 0px tomato;
+    background: tomato;
     cursor: pointer;
   }
   
+  .buttonBox:hover:nth-child(7) .buttonContainer:first-child{
+    box-shadow: 0 0px 30px 0px cyan;
+    background: cyan;
+    cursor: pointer;
+  }
   
   .button{
     width: 60px;

@@ -7,7 +7,8 @@ import { TextContext } from '../components/TextContext'
 import { TextList } from '../components/TextList';
 
 // const Body = dynamic(() => import('../components/Body'))
-import Body from '../components/Body'
+import Body from '../components/Body';
+import { SettingContext } from '../context/SettingContext';
 
 export default function Home(props) {
   const {
@@ -25,6 +26,7 @@ export default function Home(props) {
     changeLetterVsAcc
   } = useContext(TextContext);
 
+  const {zen, setZen} = useContext(SettingContext);
   const [theme, setTheme] = useState('color');
 
   useEffect(() => {
@@ -77,26 +79,31 @@ export default function Home(props) {
       }
     }
 
-    if (keyCode == 16 || keyCode == 17 || keyCode == 18) {
-      element = document.querySelector(`.${e.code}`);
-    } else {
-      element = document.querySelector(`.key-${keyCode}`);
+    if (!zen){
+      if (keyCode == 16 || keyCode == 17 || keyCode == 18) {
+        element = document.querySelector(`.${e.code}`);
+      } else {
+        element = document.querySelector(`.key-${keyCode}`);
+      }
+      element.style.backgroundColor = 'var(--keyPressColor)';
+      element.style.color = 'var(--keyPressTextColor)';
     }
-    element.style.backgroundColor = 'var(--keyPressColor)';
-    element.style.color = 'var(--keyPressTextColor)';
 
   }
   const buttonRelease = (e) => {
     let keyCode = e.keyCode;
     let element;
-    if (keyCode == 16 || keyCode == 17 || keyCode == 18) {
-      element = document.querySelector(`.${e.code}`);
-    } else {
-      element = document.querySelector(`.key-${keyCode}`);
+    if (!zen){
+      if (keyCode == 16 || keyCode == 17 || keyCode == 18) {
+        element = document.querySelector(`.${e.code}`);
+      } else {
+        element = document.querySelector(`.key-${keyCode}`);
+      }
+      element.style.backgroundColor = 'var(--keyColor)';
+      element.style.color = 'var(--textColor)';
     }
-    element.style.backgroundColor = 'var(--keyColor)';
-    element.style.color = 'var(--textColor)';
   }
+
 
   const clickSlider = () => {
     if (theme == 'light') {
@@ -116,7 +123,7 @@ export default function Home(props) {
       <Header lang={props.lang} />
       <Body lang={props.lang} fonts={props.fonts} theme={theme} clickSlider={clickSlider}>
         {props.children ? props.children : <div className={styles.wholeInformation}>
-          <div className={styles.information}>
+          <div id="information" className={styles.information}>
             <h1 className={styles.informationHeader}>नेपाली - Nepali Typing Practice Online, Nepali Keyboard Layout, Nepali Typing Tutor and Typing Test Online</h1>
             <h4 className={styles.informationText}>NepKeys is an online Nepali typing practice, typing tutor and typing test site with different themes and layouts of Nepali keyboard that helps you improve your Nepali typing skill with the analytics tool integrated inside the website. You can learn to type in various languages such as English, Nepali, Hindi and Newari with different keyboard for each language. It is absolutely free to use and guides you along your journey of learning fast and accuate typing. It calculates your accuracy, total letter and words, words per minute i.e typing speed and more importantly shows different graphs of how you improved throughout the process. It also saves your progress so that you can continue on where you last left. </h4>
             <h1 className={styles.features}>

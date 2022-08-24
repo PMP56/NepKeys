@@ -8,11 +8,14 @@ import styles from '../styles/Home.module.css'
 
 import Analytics from './Analytics'
 import { TextContext } from './TextContext';
+import { SettingContext } from '../context/SettingContext';
 // const Analytics = dynamic(() => import('./Analytics'));
 
 export default function Body(props) {
     const [isOpenAnalytics, setIsOpenAnalytics] = useState(false);
     const { changeLang } = useContext(TextContext);
+    
+    const {zen, setZen} = useContext(SettingContext);
     
     useEffect(() => {
         let lang = props.lang
@@ -58,17 +61,17 @@ export default function Body(props) {
         <Fragment>
             <div className={styles.wholeBody}>
                 <div className={styles.mainBody}>
-                    <div className={styles.toolBox}>
+                    {(!zen)? <div className={styles.toolBox}>
                         <Score lang={props.lang} openAnalytics={openAnalytics} />
                         <Slider />
-                    </div>
+                    </div> : <Fragment />}
                     <Texts />
-                    <Keyboard />
+                    {(!zen)? <Keyboard /> : <Fragment />}
                 </div>
             </div>
-            <div className={styles.boxAd}></div>
+            <div style={{height: (!zen)? '40px' : '100px'}} className={styles.boxAd}></div>
                 
-            {props.children}
+            {(!zen)? props.children : <Fragment />}
             {(isOpenAnalytics) ? <Analytics /> : <Fragment />}
         </Fragment>
     )
