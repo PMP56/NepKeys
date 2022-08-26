@@ -12,6 +12,7 @@ import { SettingContext } from '../context/SettingContext';
 
 export default function Home(props) {
   const {
+    lang,
     currentLetterIndex,
     changeLetterIndex,
     currentSentenceIndex,
@@ -54,7 +55,7 @@ export default function Home(props) {
       addUserText(e.key);
 
       //check if entered text is correct
-      if (e.key == (TextList[currentSentenceIndex])[currentLetterIndex]) {
+      if (e.key == (TextList(lang)[currentSentenceIndex])[currentLetterIndex]) {
         changeTotalCorrectLetters(totalCorrectLetters + 1);
         if (keyCode == 32) {
           changeTotalWords(totalWords + 1);

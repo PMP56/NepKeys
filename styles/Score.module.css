@@ -87,7 +87,7 @@
     transition-duration: 0.3s;
     cursor: pointer;
     border-radius: 50%;
-    background-color: rgb(37, 219, 82);
+    background-color:rgb(49, 211, 122);
   }
 
   .svgButton{
@@ -125,7 +125,7 @@
     stroke-dashoffset: 0px;
     stroke-linecap: round;
     stroke-width: 4px;
-    stroke: rgb(37, 219, 82);
+    stroke: rgb(49, 211, 122);
     fill: none;
   }
 
