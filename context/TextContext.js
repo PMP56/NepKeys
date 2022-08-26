@@ -12,7 +12,6 @@ export const TextProvider = ({ children }) => {
     const [totalLetters, setTotalLetters] = useState(0.00001);
     const [totalCorrectLetters, setTotalCorrectLetters] = useState(0);
     const [totalWords, setTotalWords] = useState(0);
-    const [totalCorrectWords, setTotalCorrectWords] = useState(0);
 
     //for graph
     const [lettersVsAcc, setLettersVsAcc] = useState({ letters: [], acc: [] });

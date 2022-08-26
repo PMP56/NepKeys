@@ -3,9 +3,9 @@ import { Fragment } from 'react/cjs/react.production.min';
 import { SettingContext } from '../context/SettingContext';
 import styles from '../styles/Texts.module.css';
 
-import { TextContext } from './TextContext';
+import { TextContext } from '../context/TextContext';
 import { TextList } from './TextList';
-const Texts = () => {
+const Texts = (props) => {
     const {
         lang,
         currentLetterIndex,
@@ -23,13 +23,7 @@ const Texts = () => {
     const [allText,setAllText] = useState(null);
 
     useEffect(() => {
-        if (lang == "English"){
-            let temp = TextList(lang, 75)
-            setAllText(temp)
-        }else{
-            let temp = TextList(lang, 50)
-            setAllText(temp)
-        }
+        setAllText(props.allText)
     }, [0])
 
     useEffect(() => {

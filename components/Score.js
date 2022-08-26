@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import Link from 'next/link';
 
 import WPMBox from './WPM';
-import { TextContext } from './TextContext';
+import { TextContext } from '../context/TextContext';
 import { SettingContext } from '../context/SettingContext';
 
 Modal.setAppElement('body');

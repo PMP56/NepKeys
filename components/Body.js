@@ -7,7 +7,7 @@ import Texts from './Texts'
 import styles from '../styles/Home.module.css'
 
 import Analytics from './Analytics'
-import { TextContext } from './TextContext';
+import { TextContext } from '../context/TextContext';
 import { SettingContext } from '../context/SettingContext';
 // const Analytics = dynamic(() => import('./Analytics'));
 
@@ -65,7 +65,7 @@ export default function Body(props) {
                         <Score lang={props.lang} openAnalytics={openAnalytics} />
                         <Slider />
                     </div> : <Fragment />}
-                    <Texts />
+                    <Texts allText={props.allText} />
                     {(!zen)? <Keyboard /> : <Fragment />}
                 </div>
             </div>

@@ -3,7 +3,7 @@ import styles from '../styles/Score.module.css'
 import Modal from 'react-modal';
 
 import { ProgressGraph } from './Analytics';
-import { TextContext } from './TextContext';
+import { TextContext } from '../context/TextContext';
 import { shuffle, TextList } from './TextList';
 
 Modal.setAppElement('body');
@@ -73,6 +73,7 @@ const WPMBox = () => {
         changeTotalCorrectLetters(0);
         changeTotalWords(0);
         changeSentenceIndex(0);
+        changeLetterVsAcc({ letters: [], acc: [] });
         audio.play();
         return setTimeout(() => {
             if (countdown > 1) {
@@ -99,7 +100,7 @@ const WPMBox = () => {
 
     return (
         <>
-            <div className={styles.buttonBox} onClick={!(isTimerOn) ? concurrentFunction : () => { }} alt="Click to start">
+            <div className={styles.buttonBox} onClick={!(isTimerOn) ? concurrentFunction : () => {}} alt="Click to start">
                 <div className={styles.svgButtonContainer}>
                     <div className={styles.svgButton}>
                         <svg className={styles.svgMain}>

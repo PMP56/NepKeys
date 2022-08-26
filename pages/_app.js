@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import Head from 'next/head'
 
-import { TextProvider } from '../components/TextContext'
+import { TextProvider } from '../context/TextContext'
 import { SettingProvider } from '../context/SettingContext'
 
 function MyApp({ Component, pageProps }) {
