@@ -142,8 +142,8 @@ const Score = (props) => {
             >
                 <h2 className={styles.modalHeader}>Choose Language</h2>
                 <div className={styles.modalBody}>
-                    <LangCard lang={"Nepali"} />
-                    <LangCard lang={"English"} link={'en'} />
+                    <LangCard lang={"English"} />
+                    <LangCard lang={"Nepali"} link={'np'} />
                     <LangCard lang={"Hindi"} link={'in'} />
                     <LangCard lang={"Newari"} link={'newa'} />
                     <LangCard lang={"Russian"} link={'ru'} />

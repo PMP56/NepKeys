@@ -1,12 +1,9 @@
 import { useContext, useState, useEffect, useRef, Fragment } from 'react';
 import Header from '../components/Header'
-import dynamic from 'next/dynamic';
 
 import styles from '../styles/Home.module.css'
 import { TextContext } from '../context/TextContext'
 import { TextList } from '../components/TextList';
-
-// const Body = dynamic(() => import('../components/Body'))
 import Body from '../components/Body';
 import { SettingContext } from '../context/SettingContext';
 
@@ -24,6 +21,7 @@ export default function Home(props) {
     changeTotalCorrectLetters,
     totalWords,
     changeTotalWords,
+    lettersVsAcc,
     changeLetterVsAcc
   } = useContext(TextContext);
 
@@ -64,8 +62,6 @@ export default function Home(props) {
       
       //check if entered text is correct
       if (allText){
-        console.log(e.key)
-        console.log(allText[currentSentenceIndex])
         if (e.key == (allText[currentSentenceIndex])[currentLetterIndex]) {
           changeTotalCorrectLetters(totalCorrectLetters + 1);
           if (keyCode == 32) {
@@ -89,10 +85,15 @@ export default function Home(props) {
 
     if (keyCode == 8){
       if (currentLetterIndex > 0){
+        // console.log(lettersVsAcc.letters)
+        // changeLetterVsAcc(prevState => ({
+        //   letters: prevState.letters.slice(0, -1),
+        //   acc: prevState.acc.slice(0, -1)
+        // }))
+        // changeTotalCorrectLetters(totalCorrectLetters - 1);
+        // changeTotalLetters(totalLetters - 1);
         changeLetterIndex(currentLetterIndex - 1);
         popUserText();
-        // changeTotalLetters(totalLetters - 1);
-        // addUserText(e.key);
       }
     }
 
@@ -142,23 +143,19 @@ export default function Home(props) {
         <Body lang={props.lang} fonts={props.fonts} theme={theme} clickSlider={clickSlider} allText={allText}>
           {props.children ? props.children : <div className={styles.wholeInformation}>
             <div id="information" className={styles.information}>
-              <h1 className={styles.informationHeader}>नेपाली - Nepali Typing Practice Online, Nepali Keyboard Layout, Nepali Typing Tutor and Typing Test Online</h1>
-              <h4 className={styles.informationText}>NepKeys is an online Nepali typing practice, typing tutor and typing test site with different themes and layouts of Nepali keyboard that helps you improve your Nepali typing skill with the analytics tool integrated inside the website. You can learn to type in various languages such as English, Nepali, Hindi and Newari with different keyboard for each language. It is absolutely free to use and guides you along your journey of learning fast and accuate typing. It calculates your accuracy, total letter and words, words per minute i.e typing speed and more importantly shows different graphs of how you improved throughout the process. It also saves your progress so that you can continue on where you last left. </h4>
+              <h1 className={styles.informationHeader}>English Typing Practice Online, English Keyboard Layout, English Typing Tutor and Typing Test Online</h1>
+              <h4 className={styles.informationText}>NepKeys is an online typing practice and typing test site with different themes and layouts of keyboard that helps you improve your typing skill with the analytics tool integrated inside the website. You can learn to type in various languages such as English, Nepali, Hindi and Newari with different keyboard for each language. It is absolutely free to use and guides you along your journey of learning fast and accuate typing. It calculates your accuracy, total letter and words, words per minute i.e typing speed and more importantly shows different graphs of how you improved throughout the process. It also saves your progress so that you can continue on where you last left. </h4>
               <h1 className={styles.features}>
-                Feature of NepKeys
-              </h1>
+                  Feature of NepKeys
+              </h1>  
               <ul className={styles.featuresList}>
-                <li><h1 className={styles.featuresNumber}>Practice Nepali Typing Online Anytime for Free</h1></li>
-                <li><h1 className={styles.featuresNumber}>Nepali Typing Tutor with Nepali Keyboard Layout Available</h1></li>
+                <li><h1 className={styles.featuresNumber}>Online English Typing Practice Anytime for Free</h1></li>
+                <li><h1 className={styles.featuresNumber}>English Typing Tutor with English Keyboard Layout Available</h1></li>
                 <li><h1 className={styles.featuresNumber}>Interchangeable Language to Practice Typing in Any Language</h1></li>
-                <li><h1 className={styles.featuresNumber}>Nepali Typing Test to Calcualte Words Per Minute and Accuracy Percentage</h1></li>
+                <li><h1 className={styles.featuresNumber}>Typing Test to Calcualte Words Per Minute and Accuracy Percentage</h1></li>
                 <li><h1 className={styles.featuresNumber}>Graphs and Charts to Show Your Progress Throughout and Compare with Other People.</h1></li>
-                <li><h1 className={styles.featuresNumber}>Next Generation Easy to use Nepali Typeshala with Scientific Calculation and Accurate Result.</h1></li>
-              </ul>
-              <h1 className={styles.features}>
-                Why is Nepali typing important and is it important to learn Nepali typing?
-              </h1>
-              <h4 className={styles.informationText}>Nepali typing is essential for almost all Nepalese involved in any sort of field whether that be public sector (for all ranking officers), teaching sector or private/corporate companies. It is more important than ever to learn typing in 2021 because every economic sector has now moved to online and people can start work from home for various jobs such as Nepali Typing, Data Entry and Translation jobs. Researches have shown that people who can type fluently in other languages have better typing skill in English than the remaining population. Learning to type in Nepali improves your overall typing skill and your Nepali vocabulary. There used to be a program called Typeshala many years ago to practice Nepali typing but it didn’t have any mathematical tools to measure your speed or track your progress all along. In fact, there is no real program/website today that accurately measures your Nepali typing speed and guide you to improve your typing. This is where NepKeys come in.</h4>
+                <li><h1 className={styles.featuresNumber}>Next Generation Easy to use Typeshala with Scientific Calculation and Accurate Result.</h1></li>
+            </ul>
             </div>
           </div>}
         </Body> : <Fragment />

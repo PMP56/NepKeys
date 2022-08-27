@@ -37,7 +37,7 @@ const shorten = (array, chars = 60) => {
         }
         let len = currentSentence.length
 
-        if (len < 50){
+        if (len < chars/ 2 + 15 ){ // 50 = 70/2 + 15
             tempText = currentSentence;
         }
         else if (len > chars){

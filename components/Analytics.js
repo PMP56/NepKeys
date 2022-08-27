@@ -82,7 +82,7 @@ const Analytics = () => {
             {
                 label: 'Global WPM Score',
                 lineTension: 0.1,
-                backgroundColor: 'rgba(250, 223, 72)',
+                backgroundColor: 'rgb(49, 211, 122)',
                 borderColor: 'rgba(75,192,192,1)',
                 borderCapStyle: 'butt',
                 borderDash: [],
@@ -120,9 +120,9 @@ const Analytics = () => {
 
     return (
         <div className={styles.analytics}>
-            <h1 style={{ color: 'var(--textColor)' }}>Your Progress Graph</h1>
+            <h2 style={{ color: 'var(--textColor)', fontFamily: 'Montserrat' }}>Your Progress Graph</h2>
             <ProgressGraph />
-            <h1 style={{ color: 'var(--textColor)' }}>Global Score (WPM)</h1>
+            <h2 style={{ color: 'var(--textColor)', fontFamily: 'Montserrat' }}>Global Score (WPM)</h2>
             <Bar
                 data={globalData}
                 width={1000}
